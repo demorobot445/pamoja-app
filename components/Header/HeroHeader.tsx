@@ -1,0 +1,44 @@
+import Link from "next/link";
+import Logo from "../Svgs/Logo";
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+import { Html, useProgress } from "@react-three/drei";
+
+const HeroHeader = () => {
+  const { progress } = useProgress();
+  const overlayRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (progress === 100) {
+      const timeoutId = setTimeout(() => {
+        gsap.to(overlayRef.current!, { opacity: 0 });
+      }, 3000);
+      return () => clearTimeout(timeoutId);
+    }
+  }, [progress]);
+
+  return (
+    <Html position={[0, 0.5, 0]} fullscreen>
+      <div
+        ref={overlayRef}
+        className="absolute z-[5] pointer-events-none w-full h-full bg-black/50 flex flex-col item-center justify-center"
+      >
+        <p className="font-vietnam-pro text-center text-xl text-white">
+          SCROLL TO DISCOVER
+        </p>
+      </div>
+      <header className="absolute bottom-0 gap-8 z-10 w-full flex flex-col items-center justify-center py-9">
+        <Logo />
+        <div className="flex items-center gap-16 justify-center w-full *:uppercase font-vietnam-pro *:font-medium text-white">
+          <Link href="/about">about us</Link>
+          <Link href="/">artist</Link>
+          <Link href="/">shop</Link>
+          <Link href="/">contact</Link>
+          <Link href="/">events</Link>
+        </div>
+      </header>
+    </Html>
+  );
+};
+
+export default HeroHeader;
