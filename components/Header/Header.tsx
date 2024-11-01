@@ -53,7 +53,7 @@ const Header = ({ isFixed }: { isFixed?: boolean }) => {
     <header
       ref={containerRef}
       className={`flex py-4 px-4 lg:py-8 lg:px-9 ${
-        isFixed ? "fixed top-0 w-full z-10" : "relative"
+        isFixed ? "fixed top-0 w-full z-20" : "relative"
       } `}
     >
       <button onClick={handleClick} className="h-12 w-12 relative z-30">

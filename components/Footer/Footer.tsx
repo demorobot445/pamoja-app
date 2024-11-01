@@ -10,10 +10,10 @@ const Footer = () => {
       </div>
       <div className="flex flex-wrap gap-9 relative z-10 items-center lg:gap-16 justify-center w-full *:uppercase font-vietnam-pro *:font-medium text-white">
         <Link href="/about">about us</Link>
-        <Link href="/">artist</Link>
-        <Link href="/">shop</Link>
+        <Link href="/artists">artist</Link>
+        <Link href="/shop">shop</Link>
         <Link href="/">contact</Link>
-        <Link href="/">events</Link>
+        <Link href="/events">events</Link>
       </div>
       <p className="text-xs font-vietnam-pro text-center uppercase relative z-10 text-white">
         ALL RIGHTS RESERVED PAMOJA © GALLERY
