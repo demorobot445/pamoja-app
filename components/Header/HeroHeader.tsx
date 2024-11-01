@@ -31,10 +31,10 @@ const HeroHeader = () => {
         <Logo />
         <div className="flex items-center gap-16 justify-center w-full *:uppercase font-vietnam-pro *:font-medium text-white">
           <Link href="/about">about us</Link>
-          <Link href="/">artist</Link>
-          <Link href="/">shop</Link>
+          <Link href="/artists">artist</Link>
+          <Link href="/shop">shop</Link>
           <Link href="/">contact</Link>
-          <Link href="/">events</Link>
+          <Link href="/events">events</Link>
         </div>
       </header>
     </Html>

@@ -5,7 +5,7 @@ import gsap from "gsap";
 import Image from "next/image";
 import Link from "next/link";
 
-const Header = () => {
+const Header = ({ isFixed }: { isFixed?: boolean }) => {
   const tl = useRef<GSAPTimeline>();
   const containerRef = useRef<HTMLHeadElement>(null);
   const [isActive, setIsActive] = useState<boolean>(false);
@@ -52,7 +52,9 @@ const Header = () => {
   return (
     <header
       ref={containerRef}
-      className="flex py-4 px-4 lg:py-8 lg:px-9 relative "
+      className={`flex py-4 px-4 lg:py-8 lg:px-9 ${
+        isFixed ? "fixed top-0 w-full z-10" : "relative"
+      } `}
     >
       <button onClick={handleClick} className="h-12 w-12 relative z-30">
         <span className="btn-span-1 bg-black h-[6px] w-[100%] rounded-full block absolute  top-[10%]" />
@@ -68,19 +70,19 @@ const Header = () => {
         <div className="relative z-10 flex flex-col items-center justify-center gap-3">
           <Link
             className="link text-5xl lg:text-7xl uppercase font-bold text-center font-vietnam-pro text-white"
-            href="#"
+            href="/shop"
           >
             shop
           </Link>
           <Link
             className="link text-5xl lg:text-7xl uppercase font-bold text-center font-vietnam-pro text-black"
-            href="#"
+            href="/artists"
           >
             artist
           </Link>
           <Link
             className="link text-5xl lg:text-7xl uppercase font-bold text-center font-vietnam-pro text-white"
-            href="#"
+            href="/about"
           >
             about us
           </Link>
@@ -92,7 +94,7 @@ const Header = () => {
           </Link>
           <Link
             className="link text-5xl lg:text-7xl uppercase font-bold text-center font-vietnam-pro text-white"
-            href="#"
+            href="/events"
           >
             events
           </Link>

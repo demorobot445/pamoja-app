@@ -3,5 +3,11 @@
 @tailwind utilities;
 
 body {
+  --swiper-theme-color: #ffffff;
   overscroll-behavior: none;
+}
+
+.swiper-button-prev.swiper-button-disabled,
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0 !important;
 }
