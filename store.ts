@@ -1,5 +1,9 @@
 import { proxy } from "valtio";
 
-type Store = {};
+type Store = {
+  isCartActive: boolean;
+};
 
-export const store = proxy<Store>({});
+export const store = proxy<Store>({
+  isCartActive: false,
+});

@@ -1,4 +1,3 @@
-import { store } from "@/store";
 import { useGSAP } from "@gsap/react";
 import { PerspectiveCamera } from "@react-three/drei";
 import gsap from "gsap";
@@ -188,6 +187,61 @@ const AnimatedCamera = ({
         //#1
         .to(cameraRef.current!.position, { x: 1.67, y: 0.27, z: -10.36 })
         .to(cameraRef.current!.rotation, { y: -1.51 }, "<")
+        .to(frameButtonRef.current, { bottom: 0 }, "<")
+        .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
+        //#2
+        .to(cameraRef.current!.position, { x: 1.59, y: 0.27, z: -11.3 })
+        .to(cameraRef.current!.rotation, { y: -1.4 }, "<")
+        .to(frameButtonRef.current, { bottom: 0 }, "<")
+        .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
+        //#3
+        .to(cameraRef.current!.position, { x: 1.39, y: 0.27, z: -12.26 })
+        .to(cameraRef.current!.rotation, { y: -1.3 }, "<")
+        .to(frameButtonRef.current, { bottom: 0 }, "<")
+        .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
+        //#4
+        .to(cameraRef.current!.position, { x: 1.14, y: 0.27, z: -13.26 })
+        .to(cameraRef.current!.rotation, { y: -1.29 }, "<")
+        .to(frameButtonRef.current, { bottom: 0 }, "<")
+        .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
+        //#5
+        .to(cameraRef.current!.position, { x: 0.87, y: 0.27, z: -14.21 })
+        .to(cameraRef.current!.rotation, { y: -1.24 }, "<")
+        .to(frameButtonRef.current, { bottom: 0 }, "<")
+        .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
+        //#6
+        .to(cameraRef.current!.position, { x: 0.5, y: 0.27, z: -15.18 })
+        .to(cameraRef.current!.rotation, { y: -1.2 }, "<")
+        .to(frameButtonRef.current, { bottom: 0 }, "<")
+        .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
+        //#7
+        .to(cameraRef.current!.position, { x: -0.25, y: 0.27, z: -15.19 })
+        .to(cameraRef.current!.rotation, { y: 1.2 }, "<")
+        .to(frameButtonRef.current, { bottom: 0 }, "<")
+        .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
+        //#8
+        .to(cameraRef.current!.position, { x: -0.62, y: 0.27, z: -14.22 })
+        .to(cameraRef.current!.rotation, { y: 1.25 }, "<")
+        .to(frameButtonRef.current, { bottom: 0 }, "<")
+        .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
+        //#9
+        .to(cameraRef.current!.position, { x: -0.89, y: 0.27, z: -13.26 })
+        .to(cameraRef.current!.rotation, { y: 1.29 }, "<")
+        .to(frameButtonRef.current, { bottom: 0 }, "<")
+        .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
+        //#10
+        .to(cameraRef.current!.position, { x: -1.14, y: 0.27, z: -12.26 })
+        .to(cameraRef.current!.rotation, { y: 1.3 }, "<")
+        .to(frameButtonRef.current, { bottom: 0 }, "<")
+        .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
+        //#11
+        .to(cameraRef.current!.position, { x: -1.34, y: 0.27, z: -11.3 })
+        .to(cameraRef.current!.rotation, { y: 1.41 }, "<")
+        .to(frameButtonRef.current, { bottom: 0 }, "<")
+        .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
+        //#12
+        .to(cameraRef.current!.position, { x: -1.42, y: 0.27, z: -10.38 })
+        .to(cameraRef.current!.rotation, { y: 1.52 }, "<")
         .to(frameButtonRef.current, { bottom: 0 }, "<")
         .to(frameButtonRef.current, { bottom: "-100%" }, ">1");
     },
