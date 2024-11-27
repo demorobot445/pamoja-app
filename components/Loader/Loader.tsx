@@ -4,14 +4,13 @@ import Image from "next/image";
 const Loader = () => {
   return (
     <Html position={[0, 0.5, 0]} fullscreen>
-      {/* <Image src="/loader.png" alt="loader" fill /> */}
-      <video
-        className="h-full w-full object-cover"
-        muted
-        autoPlay
-        playsInline
-        src="/loader.mp4"
-      ></video>
+      <Image
+        className="object-cover"
+        unoptimized={true}
+        src="/loader.gif"
+        alt="loader"
+        fill
+      />
     </Html>
   );
 };
