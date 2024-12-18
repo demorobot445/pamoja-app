@@ -15,7 +15,7 @@ const Artwork = () => {
         <div className="flex flex-col items-center justify-center gap-24">
           {[...Array(2)].map((e, i) => {
             return (
-              <div className="flex flex-col gap-6">
+              <div key={i} className="flex flex-col gap-6">
                 <Image
                   className="lg:w-[500px] lg:h-[520px] object-cover mb-3"
                   src={`/artwork/${i}.png`}

@@ -6,12 +6,14 @@ const Card = ({
   id,
   name,
   price,
+  image,
   quantity,
 }: {
   id: string;
   price: number | undefined;
   name: string;
   quantity: number | undefined;
+  image: string;
 }) => {
   const { removeItem, updateItemQuantity } = useCart();
 
@@ -41,7 +43,7 @@ const Card = ({
     <div className="flex gap-2">
       <Image
         className="object-cover h-20 w-20"
-        src="/artwork/0.png"
+        src={image}
         alt="cart-product-img"
         height={100}
         width={100}

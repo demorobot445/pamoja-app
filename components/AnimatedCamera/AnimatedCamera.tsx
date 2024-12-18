@@ -1,3 +1,4 @@
+import { store } from "@/store";
 import { useGSAP } from "@gsap/react";
 import { PerspectiveCamera } from "@react-three/drei";
 import gsap from "gsap";
@@ -52,6 +53,9 @@ const AnimatedCamera = ({
           },
         })
         //#1
+        .call(() => {
+          store.artistLink = "/artists/habyarimana-iddy";
+        })
         .to(cameraRef.current!.position, { x: 1.67, y: 0.27, z: 13.7 })
         .to(cameraRef.current!.rotation, { y: -1.51 }, "<")
         .to(frameButtonRef.current, { bottom: 0 }, "<")
@@ -77,6 +81,9 @@ const AnimatedCamera = ({
         .to(frameButtonRef.current, { bottom: 0 }, "<")
         .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
         //#6
+        .call(() => {
+          store.artistLink = "/artists/niyonshimiye-cedrick";
+        })
         .to(cameraRef.current!.position, { x: 0.5, y: 0.27, z: 8.88 })
         .to(cameraRef.current!.rotation, { y: -1.21 }, "<")
         .to(frameButtonRef.current, { bottom: 0 }, "<")
@@ -117,6 +124,9 @@ const AnimatedCamera = ({
         //second room
         .to(cameraRef.current!.position, { z: 4.42 })
         //#1
+        .call(() => {
+          store.artistLink = "/artists/habumugisha-obed";
+        })
         .to(cameraRef.current!.position, { x: -1.43, y: 0.27, z: 1.64 })
         .to(cameraRef.current!.rotation, { y: 1.52 }, "<")
         .to(frameButtonRef.current, { bottom: 0 }, "<")
@@ -142,6 +152,9 @@ const AnimatedCamera = ({
         .to(frameButtonRef.current, { bottom: 0 }, "<")
         .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
         //#6
+        .call(() => {
+          store.artistLink = "/artists/kasagga-jude";
+        })
         .to(cameraRef.current!.position, { x: -0.25, y: 0.27, z: -3.16 })
         .to(cameraRef.current!.rotation, { y: 1.21 }, "<")
         .to(frameButtonRef.current, { bottom: 0 }, "<")
@@ -185,6 +198,9 @@ const AnimatedCamera = ({
           z: -7.42,
         })
         //#1
+        .call(() => {
+          store.artistLink = "/artists/nsengiyumva-yusuf";
+        })
         .to(cameraRef.current!.position, { x: 1.67, y: 0.27, z: -10.36 })
         .to(cameraRef.current!.rotation, { y: -1.51 }, "<")
         .to(frameButtonRef.current, { bottom: 0 }, "<")
@@ -210,6 +226,9 @@ const AnimatedCamera = ({
         .to(frameButtonRef.current, { bottom: 0 }, "<")
         .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
         //#6
+        .call(() => {
+          store.artistLink = "/artists/ishimwe-shema-b";
+        })
         .to(cameraRef.current!.position, { x: 0.5, y: 0.27, z: -15.18 })
         .to(cameraRef.current!.rotation, { y: -1.2 }, "<")
         .to(frameButtonRef.current, { bottom: 0 }, "<")
@@ -230,6 +249,9 @@ const AnimatedCamera = ({
         .to(frameButtonRef.current, { bottom: 0 }, "<")
         .to(frameButtonRef.current, { bottom: "-100%" }, ">1")
         //#10
+        .call(() => {
+          store.artistLink = "/artists/nsengiyumva-yusuf";
+        })
         .to(cameraRef.current!.position, { x: -1.14, y: 0.27, z: -12.26 })
         .to(cameraRef.current!.rotation, { y: 1.3 }, "<")
         .to(frameButtonRef.current, { bottom: 0 }, "<")

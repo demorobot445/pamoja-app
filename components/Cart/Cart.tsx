@@ -30,7 +30,7 @@ const Cart = () => {
   return (
     <div
       ref={container}
-      className="fixed flex flex-col justify-between bg-white w-1/3 h-full z-20 px-7 -right-full top-0 "
+      className="fixed flex flex-col justify-between bg-white w-full lg:w-1/3 h-full z-20 px-7 -right-full top-0 "
     >
       <div className="flex flex-col h-fit">
         <div className="flex justify-between py-4 border-b border-black">
@@ -54,6 +54,7 @@ const Cart = () => {
                 price={e.itemTotal}
                 quantity={e.quantity}
                 key={e.id}
+                image={e.image}
               />
             );
           })

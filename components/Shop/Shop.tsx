@@ -1,11 +1,34 @@
+import { store } from "@/store";
 import Image from "next/image";
+import { useCart } from "react-use-cart";
 
 const Shop = () => {
+  const { addItem } = useCart();
+
+  const handleAddToCart = (
+    id: number,
+    price: number,
+    name: string,
+    image: string
+  ) => {
+    addItem({
+      id: `${id}`,
+      name,
+      price,
+      quantity: 1,
+      image,
+    });
+    store.isCartActive = true;
+  };
+
   return (
     <section className="flex flex-wrap ">
-      {[...Array(4)].map((e, i) => {
+      {["TOTE BAG", "TOTE BAG", "IMAGE", "IMAGE"].map((e, i) => {
         return (
-          <div className="w-full cursor-pointer group lg:w-1/2 relative overflow-hidden">
+          <div
+            onClick={() => handleAddToCart(i, 50, e, `/shop/${i}.png`)}
+            className="w-full cursor-pointer group lg:w-1/2 relative overflow-hidden"
+          >
             <Image
               className="w-full h-full"
               src={`/shop/${i}.png`}
@@ -18,7 +41,7 @@ const Shop = () => {
                 PAMOJA
               </h2>
               <h2 className="text-4xl text-white font-bold font-vietnam-pro uppercase">
-                TOTE BAG
+                {e}
               </h2>
               <h2 className="text-4xl text-white font-normal font-vietnam-pro">
                 50.00
