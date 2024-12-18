@@ -21,6 +21,7 @@ const FrameButtons = ({
         add to bag
       </button> */}
       <Link
+        target="_blank"
         href={artistLink}
         className="border-white cursor-pointer border font-vietnam-pro font-medium uppercase py-4 px-11 text-white"
       >
