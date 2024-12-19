@@ -31,7 +31,7 @@ const HeroHeader = () => {
         <Logo />
         <div className="flex flex-wrap lg:flex-nowrap items-center gap-8 max-w-[85%] lg:max-w-[100%] lg:gap-16 justify-center w-full *:uppercase font-vietnam-pro *:font-medium text-white">
           <Link href="/about">about us</Link>
-          <Link href="/artists">artist</Link>
+          <Link href="/">artist</Link>
           <Link href="/shop">shop</Link>
           <Link href="/contact">contact</Link>
           <Link href="/events">events</Link>
