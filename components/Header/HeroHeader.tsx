@@ -33,7 +33,7 @@ const HeroHeader = () => {
           <Link href="/about">about us</Link>
           <Link href="/artists">artist</Link>
           <Link href="/shop">shop</Link>
-          <Link href="/">contact</Link>
+          <Link href="/contact">contact</Link>
           <Link href="/events">events</Link>
         </div>
       </header>
