@@ -10,7 +10,7 @@ const Card = ({ title }: { title: string }) => {
             <div key={i} className="flex flex-col lg:flex-row gap-16">
               <div className="flex flex-col">
                 <h4 className="text-2xl text-primary font-bold font-vietnam-pro mb-10">
-                  Member Early Hour
+                  Lauching Today
                 </h4>
                 <p className="text-2xl font-bold font-vietnam-pro">
                   9:30-10:30am
@@ -21,11 +21,11 @@ const Card = ({ title }: { title: string }) => {
                 </p>
               </div>
               <Image
-                className="lg:w-[300px] lg:h-[175px] object-cover"
-                src="/demo.jpeg"
+                className="lg:w-[175px] lg:h-[300px] object-cover"
+                src="/event.jpeg"
                 alt="event-img"
-                width={1600}
-                height={900}
+                width={900}
+                height={1600}
               />
             </div>
           );

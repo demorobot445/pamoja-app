@@ -4,7 +4,7 @@ import ArrowPrev from "../Svgs/ArrowPrev";
 import Card from "./Card";
 
 const Events = () => {
-  const [currentDate, setCurrentDate] = useState(new Date("10-6-2024")); // Initial date is today's date
+  const [currentDate, setCurrentDate] = useState(new Date("12-19-2024")); // Initial date is today's date
 
   // Utility function to format the date
   const formatDate = (date: Date): string => {
@@ -51,7 +51,7 @@ const Events = () => {
         </div>
       </div>
       <div className="flex flex-col container px-4 lg:px-0 mx-auto gap-28">
-        {["Sun, Oct 6", "Sun, Oct 7", "Sun, Oct 8"].map((e, i) => {
+        {["Thur, Dec 19", "Thur, Dec 19"].map((e, i) => {
           return <Card key={i} title={e} />;
         })}
       </div>
