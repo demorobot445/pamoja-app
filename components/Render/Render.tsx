@@ -15,7 +15,7 @@ const Render = ({
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div ref={containerRef} className="h-svh fixed inset-0">
+    <div ref={containerRef} className="h-lvh fixed inset-0">
       <Canvas shadows={"soft"}>
         {/* <Lights /> */}
         <AnimatedCamera
