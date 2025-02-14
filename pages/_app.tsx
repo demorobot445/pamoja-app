@@ -4,6 +4,7 @@ import type { AppProps } from "next/app";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
 import { CartProvider } from "react-use-cart";
+import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
 
 const beVietnamPro = Be_Vietnam_Pro({
   subsets: ["latin"],
@@ -11,7 +12,7 @@ const beVietnamPro = Be_Vietnam_Pro({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
 });
 
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -19,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
       className={`${beVietnamPro.variable} font-sans overflow-x-hidden bg-background`}
     >
       <CartProvider>
-      <Component {...pageProps} />
+        <Component {...pageProps} />
       </CartProvider>
     </main>
   );

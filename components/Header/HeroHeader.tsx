@@ -18,7 +18,7 @@ const HeroHeader = () => {
   }, [progress]);
 
   return (
-    <Html position={[0, 1.5, 0]} fullscreen>
+    <Html style={{ pointerEvents: "none" }} position={[0, 1.5, 0]} fullscreen>
       <div
         ref={overlayRef}
         className="absolute z-[5] pointer-events-none w-full h-full bg-black/50 flex flex-col item-center justify-center"
@@ -27,11 +27,14 @@ const HeroHeader = () => {
           SCROLL TO DISCOVER
         </p>
       </div>
-      <header className="absolute bottom-0 gap-8 z-10 w-full flex flex-col items-center justify-center py-9">
+      <header
+        style={{ pointerEvents: "all" }}
+        className="absolute bottom-0 gap-8 z-10 w-full flex flex-col items-center justify-center py-9"
+      >
         <Logo />
         <div className="flex flex-wrap lg:flex-nowrap items-center gap-8 max-w-[85%] lg:max-w-[100%] lg:gap-16 justify-center w-full *:uppercase font-vietnam-pro *:font-medium text-white">
           <Link href="/about">about us</Link>
-          <Link href="/">artist</Link>
+          <Link href="/">artists</Link>
           <Link href="/shop">shop</Link>
           <Link href="/contact">contact</Link>
           <Link href="/events">events</Link>

@@ -23,7 +23,7 @@ const Shop = () => {
 
   return (
     <section className="flex flex-wrap ">
-      {["TOTE BAG", "TOTE BAG", "IMAGE", "IMAGE"].map((e, i) => {
+      {["TOTE BAG", "TOTE BAG"].map((e, i) => {
         return (
           <div
             onClick={() => handleAddToCart(i, 50, e, `/shop/${i}.png`)}

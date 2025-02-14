@@ -78,7 +78,7 @@ const Header = ({ isFixed }: { isFixed?: boolean }) => {
             className="link text-5xl lg:text-7xl uppercase font-bold text-center font-vietnam-pro text-black"
             href="/"
           >
-            artist
+            artists
           </Link>
           <Link
             className="link text-5xl lg:text-7xl uppercase font-bold text-center font-vietnam-pro text-white"

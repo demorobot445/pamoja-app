@@ -1,9 +1,10 @@
 import { store } from "@/store";
 import { useGSAP } from "@gsap/react";
-import { PerspectiveCamera } from "@react-three/drei";
+import { Box, PerspectiveCamera, useCursor } from "@react-three/drei";
 import gsap from "gsap";
-import { useRef } from "react";
+import { Suspense, useRef, useState } from "react";
 import { PerspectiveCamera as PC } from "three";
+import { Arrow } from "../Models/Arrow";
 // import { Pane } from "tweakpane";
 
 const AnimatedCamera = ({
@@ -14,6 +15,8 @@ const AnimatedCamera = ({
   frameButtonRef: React.RefObject<HTMLDivElement>;
 }) => {
   const cameraRef = useRef<PC>(null);
+
+  const gsapTimeline = useRef<GSAPTimeline | null>(null);
 
   // useEffect(() => {
   //   const pane = new Pane();
@@ -42,7 +45,7 @@ const AnimatedCamera = ({
 
   useGSAP(
     () => {
-      gsap
+      gsapTimeline.current = gsap
         .timeline({
           scrollTrigger: {
             trigger: containerRef.current!,
@@ -123,6 +126,7 @@ const AnimatedCamera = ({
         .to(cameraRef.current!.rotation, { y: 0 }, "<")
         //second room
         .to(cameraRef.current!.position, { z: 4.42 })
+        .addLabel("second-room")
         //#1
         .call(() => {
           store.artistLink = "/artists/habumugisha-obed";
@@ -197,6 +201,7 @@ const AnimatedCamera = ({
         .to(cameraRef.current!.position, {
           z: -7.42,
         })
+        .addLabel("third-room")
         //#1
         .call(() => {
           store.artistLink = "/artists/nsengiyumva-yusuf";
@@ -270,8 +275,62 @@ const AnimatedCamera = ({
     { dependencies: [containerRef] }
   );
 
+  function labelToScroll(timeline: GSAPTimeline, label: string) {
+    let st = timeline.scrollTrigger!;
+    return (
+      st.start +
+      (st.end - st.start) * (timeline.labels[label] / timeline.duration())
+    );
+  }
+
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  useCursor(isHovered);
+
   return (
-    <PerspectiveCamera ref={cameraRef} makeDefault position={[0, 0.5, 16.46]} />
+    <>
+      <Suspense fallback={null}>
+        <Arrow
+          onClick={() => {
+            if (gsapTimeline.current) {
+              gsap.to(window, {
+                scrollTo: labelToScroll(gsapTimeline.current, "second-room"),
+                duration: 1,
+              });
+            }
+          }}
+          onPointerEnter={() => setIsHovered(true)}
+          onPointerLeave={() => setIsHovered(false)}
+          scale={0.1}
+          rotation-x={Math.PI * 0.5}
+          position={[2, 1, 13.6]}
+        >
+          <meshStandardMaterial color={"gray"} />
+        </Arrow>
+        <Arrow
+          onClick={() => {
+            if (gsapTimeline.current) {
+              gsap.to(window, {
+                scrollTo: labelToScroll(gsapTimeline.current, "third-room"),
+                duration: 1,
+              });
+            }
+          }}
+          onPointerEnter={() => setIsHovered(true)}
+          onPointerLeave={() => setIsHovered(false)}
+          scale={0.1}
+          rotation-x={Math.PI * 0.5}
+          position={[2, 1, 1.5]}
+        >
+          <meshStandardMaterial color={"gray"} />
+        </Arrow>
+      </Suspense>
+      <PerspectiveCamera
+        ref={cameraRef}
+        makeDefault
+        position={[0, 0.5, 16.46]}
+      />
+    </>
   );
 };
 
