@@ -1,6 +1,6 @@
 const Description = () => {
   return (
-    <section className="container mx-auto px-4 lg:px-0 lg:pb-16 flex flex-col items-center justify-center">
+    <section className="container mt-32 mx-auto px-4 lg:px-0 lg:pb-16 flex flex-col items-center justify-center">
       <div className="max-w-[670px] flex flex-col gap-16">
         <p className="font-vietnam-pro text-center">
           Pamoja is an innovative virtual gallery and community platform

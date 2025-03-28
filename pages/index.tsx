@@ -1,5 +1,6 @@
 import Cart from "@/components/Cart/Cart";
 import FrameButtons from "@/components/FrameButtons/FrameButtons";
+import HeaderV2 from "@/components/Header/HeaderV2";
 import Render from "@/components/Render/Render";
 import CartIcon from "@/components/Svgs/CartIcon";
 import { store } from "@/store";
@@ -18,10 +19,11 @@ export default function Home() {
       <Head>
         <title>Pamoja Application</title>
       </Head>
-      <button onClick={handleCart} className="fixed z-20 top-9 right-8">
+      {/* <button onClick={handleCart} className="fixed z-20 top-9 right-8">
         <CartIcon />
       </button>
-      <Cart />
+      <Cart /> */}
+      <HeaderV2 isRoom />
       <Render frameTl={frameTl} />
       <FrameButtons frameTl={frameTl} />
     </>

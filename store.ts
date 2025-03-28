@@ -5,6 +5,9 @@ type Store = {
   artistLink: string;
   moveCamera: (x: number, y: number, z: number, rotateY: number) => void;
   previousLocation: { x: number; y: number; z: number; rotateY: number };
+  moveToFirstRoom: () => void;
+  moveToSecondRoom: () => void;
+  moveToThirdRoom: () => void;
 };
 
 export const store = proxy<Store>({
@@ -12,4 +15,7 @@ export const store = proxy<Store>({
   artistLink: "/",
   moveCamera: () => {},
   previousLocation: { x: 0, y: 0, z: 0, rotateY: 0 },
+  moveToFirstRoom: () => {},
+  moveToSecondRoom: () => {},
+  moveToThirdRoom: () => {},
 });

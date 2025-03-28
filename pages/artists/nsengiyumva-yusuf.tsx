@@ -3,7 +3,7 @@ import Carousel from "@/components/Artists/Carousel";
 import Description from "@/components/Artists/Description";
 import Hero from "@/components/Artists/Hero";
 import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header/Header";
+import HeaderV2 from "@/components/Header/HeaderV2";
 import Head from "next/head";
 
 export default function NsengiyumvaYusuf() {
@@ -12,7 +12,7 @@ export default function NsengiyumvaYusuf() {
       <Head>
         <title>Pamoja Application - {"NSENGIYUMVA YUSUF"}</title>
       </Head>
-      <Header />
+      <HeaderV2 isColor />
       <Hero />
       <Carousel
         name={"NSENGIYUMVA YUSUF"}

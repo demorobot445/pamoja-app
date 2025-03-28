@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const EventHead = () => {
   return (
-    <div className="container px-4 lg:px-0 mx-auto">
+    <div className="container pt-10 px-4 lg:px-0 mx-auto">
       <h1 className="mt-28 mb-9 text-5xl lg:text-7xl uppercase font-bold font-vietnam-pro">
         Events
       </h1>

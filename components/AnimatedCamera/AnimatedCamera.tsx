@@ -62,6 +62,7 @@ const AnimatedCamera = ({
             end: `bottom+=${innerHeight * 40} bottom`,
           },
         })
+        .addLabel("first-room")
         //#1
         .to(cameraRef.current!.position, { x: 1.2, y: 0.27, z: 13.72 })
         .to(cameraRef.current!.rotation, { y: -1.51 }, "<")
@@ -233,48 +234,35 @@ const AnimatedCamera = ({
     );
   }
 
-  const [isHovered, setIsHovered] = useState<boolean>(false);
-
-  useCursor(isHovered);
+  useEffect(() => {
+    store.moveToFirstRoom = () => {
+      if (gsapTimeline.current) {
+        gsap.to(window, {
+          scrollTo: labelToScroll(gsapTimeline.current, "first-room"),
+          duration: 1,
+        });
+      }
+    };
+    store.moveToSecondRoom = () => {
+      if (gsapTimeline.current) {
+        gsap.to(window, {
+          scrollTo: labelToScroll(gsapTimeline.current, "second-room"),
+          duration: 1,
+        });
+      }
+    };
+    store.moveToThirdRoom = () => {
+      if (gsapTimeline.current) {
+        gsap.to(window, {
+          scrollTo: labelToScroll(gsapTimeline.current, "third-room"),
+          duration: 1,
+        });
+      }
+    };
+  }, [gsapTimeline]);
 
   return (
     <>
-      <Suspense fallback={null}>
-        <Arrow
-          onClick={() => {
-            if (gsapTimeline.current) {
-              gsap.to(window, {
-                scrollTo: labelToScroll(gsapTimeline.current, "second-room"),
-                duration: 1,
-              });
-            }
-          }}
-          onPointerEnter={() => setIsHovered(true)}
-          onPointerLeave={() => setIsHovered(false)}
-          scale={0.1}
-          rotation-x={Math.PI * 0.5}
-          position={[2, 1, 13.6]}
-        >
-          <meshStandardMaterial color={"gray"} />
-        </Arrow>
-        <Arrow
-          onClick={() => {
-            if (gsapTimeline.current) {
-              gsap.to(window, {
-                scrollTo: labelToScroll(gsapTimeline.current, "third-room"),
-                duration: 1,
-              });
-            }
-          }}
-          onPointerEnter={() => setIsHovered(true)}
-          onPointerLeave={() => setIsHovered(false)}
-          scale={0.1}
-          rotation-x={Math.PI * 0.5}
-          position={[2, 1, 1.5]}
-        >
-          <meshStandardMaterial color={"gray"} />
-        </Arrow>
-      </Suspense>
       <PerspectiveCamera
         ref={cameraRef}
         makeDefault

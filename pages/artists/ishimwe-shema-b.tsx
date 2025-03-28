@@ -3,7 +3,7 @@ import Carousel from "@/components/Artists/Carousel";
 import Description from "@/components/Artists/Description";
 import Hero from "@/components/Artists/Hero";
 import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header/Header";
+import HeaderV2 from "@/components/Header/HeaderV2";
 import Head from "next/head";
 
 export default function IshimweShemaB() {
@@ -12,7 +12,7 @@ export default function IshimweShemaB() {
       <Head>
         <title>Pamoja Application - {"ISHIMWE SHEMA B."}</title>
       </Head>
-      <Header />
+      <HeaderV2 isColor />
       <Hero />
       <Carousel
         name={"ISHIMWE SHEMA B."}

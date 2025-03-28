@@ -1,7 +1,7 @@
 import EventHead from "@/components/Events/EventHead";
 import Events from "@/components/Events/Events";
 import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header/Header";
+import HeaderV2 from "@/components/Header/HeaderV2";
 import Head from "next/head";
 
 export default function EventsPage() {
@@ -11,7 +11,7 @@ export default function EventsPage() {
         <title>Pamoja Application - Events</title>
       </Head>
       <section className="bg-[#ffffff]">
-        <Header />
+        <HeaderV2 isColor />
         <EventHead />
         <Events />
         <Footer />
