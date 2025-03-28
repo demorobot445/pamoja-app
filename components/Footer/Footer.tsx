@@ -16,7 +16,7 @@ const Footer = () => {
         <Link href="/events">events</Link>
       </div>
       <p className="text-xs font-vietnam-pro text-center uppercase relative z-10 text-white">
-        ALL RIGHTS RESERVED PAMOJA © GALLERY
+        All right reserved to PAMOJA ART LTD
       </p>
       <Image
         className="object-cover"

@@ -7,7 +7,7 @@ import Head from "next/head";
 import { useRef } from "react";
 
 export default function Home() {
-  const frameButtonRef = useRef<HTMLDivElement>(null);
+  const frameTl = useRef<GSAPTimeline>();
 
   const handleCart = () => {
     store.isCartActive = true;
@@ -22,8 +22,8 @@ export default function Home() {
         <CartIcon />
       </button>
       <Cart />
-      <Render frameButtonRef={frameButtonRef} />
-      <FrameButtons frameButtonRef={frameButtonRef} />
+      <Render frameTl={frameTl} />
+      <FrameButtons frameTl={frameTl} />
     </>
   );
 }

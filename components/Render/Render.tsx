@@ -7,28 +7,22 @@ import Loader from "../Loader/Loader";
 import HeroHeader from "../Header/HeroHeader";
 import { Building } from "../Models/Building";
 
-const Render = ({
-  frameButtonRef,
-}: {
-  frameButtonRef: React.RefObject<HTMLDivElement>;
-}) => {
+type Props = {
+  frameTl: React.MutableRefObject<gsap.core.Timeline | undefined>;
+};
+
+const Render: React.FC<Props> = ({ frameTl }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
     <div ref={containerRef} className="h-lvh fixed inset-0">
       <Canvas shadows={"soft"}>
-        {/* <Lights /> */}
-        <AnimatedCamera
-          frameButtonRef={frameButtonRef}
-          containerRef={containerRef}
-        />
-        <ambientLight intensity={0.3} />
-        <Environment files={"/neutral.hdr"} />
+        <AnimatedCamera containerRef={containerRef} />
+        <Environment preset="warehouse" />
         <color args={[new Color("gray")]} attach={"background"} />
         <HeroHeader />
-
         <Suspense fallback={<Loader />}>
-          <Building position={[-0.6, 0, 5]} />
+          <Building frameTl={frameTl} />
         </Suspense>
       </Canvas>
     </div>

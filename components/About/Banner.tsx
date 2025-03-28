@@ -16,7 +16,7 @@ const Banner = () => {
               where
             </h3>
             <h3 className="text-5xl lg:text-6xl text-center uppercase font-bold font-vietnam-pro text-black">
-              rwandan
+              african
             </h3>
             <h3 className="text-5xl lg:text-6xl text-center uppercase font-bold font-vietnam-pro text-white">
               art
