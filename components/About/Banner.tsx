@@ -22,7 +22,7 @@ const Banner = () => {
               art
             </h3>
             <h3 className="text-5xl lg:text-6xl text-center uppercase font-bold font-vietnam-pro text-black">
-              meet the
+              meets the
             </h3>
             <h3 className="text-5xl lg:text-6xl text-center uppercase font-bold font-vietnam-pro text-white">
               world

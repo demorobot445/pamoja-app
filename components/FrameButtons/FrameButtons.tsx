@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useSnapshot } from "valtio";
 import CloseWhite from "../Svgs/CloseWhite";
 import gsap from "gsap";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 
 type Props = {
@@ -11,7 +11,8 @@ type Props = {
 };
 
 const FrameButtons: React.FC<Props> = ({ frameTl }) => {
-  const { artistLink, moveCamera, previousLocation } = useSnapshot(store);
+  const { artistLink, moveCamera, previousLocation, frameInfo } =
+    useSnapshot(store);
 
   const container = useRef<HTMLDivElement>(null);
 
@@ -54,13 +55,16 @@ const FrameButtons: React.FC<Props> = ({ frameTl }) => {
       </button>
       <div className="overflow-auto h-full flex flex-col gap-8">
         <div className="flex flex-col font-vietnam-pro gap-4">
-          <h1 className="fade font-bold text-xl">Artwork 4/42</h1>
-          <p className="fade font-light lg:max-w-[85%]">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid
-            alias, hic ut voluptatum voluptatibus expedita beatae laboriosam
-            nulla, sit, provident ipsam voluptates suscipit non reprehenderit
-            asperiores distinctio molestias enim ducimus!
-          </p>
+          <h1 className="fade font-bold text-xl">{frameInfo.title}</h1>
+          <div className="flex flex-col gap-2">
+            {frameInfo.detail.map((e, i) => {
+              return (
+                <p key={i} className="fade font-light lg:max-w-[85%]">
+                  {e}
+                </p>
+              );
+            })}
+          </div>
         </div>
         <hr className="fade border-black/50" />
         <div className="flex flex-col lg:flex-row gap-4">

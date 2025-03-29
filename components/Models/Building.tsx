@@ -1,6 +1,6 @@
 import * as THREE from "three";
-import React, { useState } from "react";
-import { useCursor, useGLTF } from "@react-three/drei";
+import React, { useEffect, useState } from "react";
+import { useCursor, useGLTF, useTexture } from "@react-three/drei";
 import { GLTF } from "three-stdlib";
 import { useSnapshot } from "valtio";
 import { store } from "@/store";
@@ -160,6 +160,73 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
       rotateY: camera.rotation.y,
     };
   };
+
+  const [
+    shemaArtOne,
+    shemaArtTwo,
+    shemaArtThree,
+    elyseeArtOne,
+    elyseeArtTwo,
+    elyseeArtThree,
+    elyseeArtFour,
+    elyseeArtFive,
+    elyseeArtSix,
+    elyseeArtSeven,
+    elyseeArtEight,
+    obedArtOne,
+    obedArtTwo,
+    obedArtThree,
+    obedArtFour,
+  ] = useTexture([
+    "/shema-artwork/0.jpg",
+    "/shema-artwork/1.jpg",
+    "/shema-artwork/2.jpg",
+    "/elysee-artwork/0.jpg",
+    "/elysee-artwork/1.jpg",
+    "/elysee-artwork/2.jpg",
+    "/elysee-artwork/3.jpg",
+    "/elysee-artwork/4.jpg",
+    "/elysee-artwork/5.jpg",
+    "/elysee-artwork/6.jpg",
+    "/elysee-artwork/7.jpg",
+    "/obed-artwork/0.jpg",
+    "/obed-artwork/1.jpg",
+    "/obed-artwork/2.jpg",
+    "/obed-artwork/3.jpg",
+  ]);
+
+  useEffect(() => {
+    shemaArtOne.flipY = true;
+    shemaArtOne.needsUpdate = true;
+    shemaArtTwo.flipY = true;
+    shemaArtTwo.needsUpdate = true;
+    shemaArtThree.flipY = true;
+    shemaArtThree.needsUpdate = true;
+    elyseeArtOne.flipY = true;
+    elyseeArtOne.needsUpdate = true;
+    elyseeArtTwo.flipY = true;
+    elyseeArtTwo.needsUpdate = true;
+    elyseeArtThree.flipY = true;
+    elyseeArtThree.needsUpdate = true;
+    elyseeArtFour.flipY = true;
+    elyseeArtFour.needsUpdate = true;
+    elyseeArtFive.flipY = true;
+    elyseeArtFive.needsUpdate = true;
+    elyseeArtSix.flipY = true;
+    elyseeArtSix.needsUpdate = true;
+    elyseeArtSeven.flipY = true;
+    elyseeArtSeven.needsUpdate = true;
+    elyseeArtEight.flipY = true;
+    elyseeArtEight.needsUpdate = true;
+    obedArtOne.flipY = true;
+    obedArtOne.needsUpdate = true;
+    obedArtTwo.flipY = true;
+    obedArtTwo.needsUpdate = true;
+    obedArtThree.flipY = true;
+    obedArtThree.needsUpdate = true;
+    obedArtFour.flipY = true;
+    obedArtFour.needsUpdate = true;
+  }, []);
 
   return (
     <group position={[-0.6, 0, 5]} dispose={null}>
@@ -426,6 +493,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-1, 0.318, 10.6, 1.29);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Lounge in light",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 105cm/105cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -444,6 +520,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.34, 0.32, 10.9, -1.29);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Renaissance kigali",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 195cm/140cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -462,6 +547,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.86, 0.33, 13.83, -1.51);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Confidant",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 115cm/105cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -480,6 +574,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.8, 0.32, 12.86, -1.4);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Iridescent beauty 1",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 100cm/95cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -498,6 +601,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.6, 0.328, 11.89, -1.3);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Portrait of inyambo cow",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 55cm/65cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -516,6 +628,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-0.4, 0.325, 8.66, 1.21);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Hobed in the uniform",
+            detail: [
+              "Original painting",
+              "Acrylic and oil on canvas",
+              "Size: 45cm each side",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -534,6 +655,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-0.7, 0.32, 9.62, 1.25);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Confidant",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 120cm/110cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -552,6 +682,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-1.2, 0.3, 11.55, 1.3);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Confidant",
+            detail: [
+              "Original painting",
+              "Acrylic and oil on canvas",
+              "Size: 120cm/110cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -570,6 +709,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-1.45, 0.315, 12.58, 1.41);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Silent Reflection",
+            detail: [
+              "Original painting",
+              "Acrylic and oil on canvas",
+              "Size: 110cm/ 105cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -588,6 +736,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-1.55, 0.31, 13.5, 1.52);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "First light of blessing",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 110cm/105cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -606,6 +763,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(0.72, 0.33, 8.96, -1.21);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Portrait of inyambo cow",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 65cm/50cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -624,6 +790,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.08, 0.33, 9.92, -1.25);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Iridescent beauty 2",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 100cm/100cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -642,6 +817,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-1, 0.325, -1.32, 1.29);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Ibirunga [volcanoes]",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 66cm/ 49cm",
+            ],
+          };
+          store.artistLink = "/artists/habumugisha-obed";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -660,6 +844,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.3, 0.28, -0.9, -1.29);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Self love",
+            detail: [
+              "Original painting",
+              "Acrylic and oil on canvas",
+              "Size: 105cm/ 110cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -678,6 +871,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.9, 0.33, 1.915, -1.52);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "First light of blessing 4",
+            detail: [
+              "Original painting",
+              "Acrylic and oil on canvas",
+              "Size: 80cm/100cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -696,14 +898,24 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(0.75, 0.32, -2.92, -1.21);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Emancipation II",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 130cm/103cm",
+            ],
+          };
+          store.artistLink = "/artists/ishimwe-shema-b";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-01056"].geometry}
         material={materials["ARTWORKS DETAILS-01.005"]}
-        position={[1.661, 0.299, -8.245]}
-        rotation={[Math.PI / 2, 0, 1.201]}
+        material-map={shemaArtThree}
+        position={[1.661, 0.345, -8.245]}
+        rotation={[-Math.PI * 0.5, 0, -1.201]}
         scale={[0.48, 0.541, 0.541]}
       />
       <mesh
@@ -714,15 +926,25 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-1.6, 0.32, 1.63, 1.51);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Tea",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 130cm/100cm",
+            ],
+          };
+          store.artistLink = "/artists/elysee-mushimiyimana";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-01054"].geometry}
         material={materials["ARTWORKS DETAILS-01.010"]}
-        position={[-1.386, 0.312, -3.257]}
-        rotation={[-Math.PI / 2, 0, 1.514]}
-        scale={-0.541}
+        material-map={elyseeArtEight}
+        position={[-1.373, 0.312, -3.27]}
+        rotation={[Math.PI * 0.5, 0, -1.514]}
+        scale={[-0.6, -0.541, -0.541]}
       />
       <mesh
         geometry={nodes["ARTWORKS_DETAILS-01052"].geometry}
@@ -739,14 +961,24 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-1.2, 0.3, -0.33, 1.3);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Emancipation III",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 115cm/100cm",
+            ],
+          };
+          store.artistLink = "/artists/ishimwe-shema-b";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-01050"].geometry}
         material={materials["ARTWORKS DETAILS-01.014"]}
-        position={[-1.082, 0.297, -5.283]}
-        rotation={[-Math.PI / 2, 0, 1.3]}
+        material-map={shemaArtOne}
+        position={[-1.082, 0.36, -5.283]}
+        rotation={[Math.PI * 0.5, 0, -1.3]}
         scale={-0.541}
       />
       <mesh
@@ -757,14 +989,24 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-0.66, 0.3, -2.28, 1.25);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "RWANDA NZIZA",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 80cm/70cm",
+            ],
+          };
+          store.artistLink = "/artists/ishimwe-shema-b";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-01047"].geometry}
         material={materials["ARTWORKS DETAILS-01.017"]}
+        material-map={shemaArtTwo}
         position={[-0.551, 0.307, -7.259]}
-        rotation={[-Math.PI / 2, 0, 1.256]}
+        rotation={[Math.PI * 0.5, 0, -1.256]}
         scale={-0.487}
       />
       <mesh
@@ -775,6 +1017,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-0.35, 0.32, -3.25, 1.21);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Liberity 1",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 160cm/105cm",
+            ],
+          };
+          store.artistLink = "/artists/habumugisha-obed";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -793,6 +1044,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-1.5, 0.34, 0.67, 1.4);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Nyamishaba",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 66cm/ 49cm ",
+            ],
+          };
+          store.artistLink = "/artists/habumugisha-obed";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -811,6 +1071,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.1, 0.32, -1.946, -1.25);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Cyato landscape 1",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 90cm/ 120cm",
+            ],
+          };
+          store.artistLink = "/artists/habumugisha-obed";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -829,6 +1098,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.6, 0.31, -0.0, -1.3);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Vanessa",
+            detail: [
+              "Original painting",
+              "Acrylic and oil on canvas",
+              "Size: 120cm/110cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -847,6 +1125,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.85, 0.33, 0.96, -1.4);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Blessed morning",
+            detail: [
+              "Original painting",
+              "Acrylic and oil on canvas",
+              "Size: 120cm/125cm",
+            ],
+          };
+          store.artistLink = "/artists/habyarimana-iddy";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
@@ -865,14 +1152,24 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.3, 0.3, -12.85, -1.29);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Wine date",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 85cm/105cm",
+            ],
+          };
+          store.artistLink = "/artists/elysee-mushimiyimana";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-04009"].geometry}
         material={materials["ARTWORKS DETAILS-04.001"]}
-        position={[2.275, 0.267, -18.184]}
-        rotation={[Math.PI / 2, 0, 1.282]}
+        material-map={elyseeArtFive}
+        position={[2.275, 0.35, -18.184]}
+        rotation={[-Math.PI / 2, 0, -1.282]}
         scale={0.634}
       />
       <mesh
@@ -883,14 +1180,24 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-0.95, 0.3, -13.23, 1.29);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Umwali",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 100cm/ 95cm",
+            ],
+          };
+          store.artistLink = "/artists/elysee-mushimiyimana";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-04008"].geometry}
         material={materials["ARTWORKS DETAILS-04.003"]}
-        position={[-0.82, 0.165, -18.183]}
-        rotation={[-Math.PI / 2, 0, 1.282]}
+        material-map={elyseeArtOne}
+        position={[-0.82, 0.5, -18.2]}
+        rotation={[Math.PI / 2, 0, -1.282]}
         scale={-0.634}
       />
       <mesh
@@ -901,14 +1208,24 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(0.7, 0.32, -14.86, -1.2);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Purity",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 120cm/90cm",
+            ],
+          };
+          store.artistLink = "/artists/elysee-mushimiyimana";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-01106"].geometry}
         material={materials["ARTWORKS DETAILS-01.006"]}
-        position={[1.646, 0.304, -20.167]}
-        rotation={[Math.PI / 2, 0, 1.201]}
+        material-map={elyseeArtFour}
+        position={[1.6, 0.34, -20.137]}
+        rotation={[-Math.PI / 2, 0, -1.201]}
         scale={[0.48, 0.541, 0.541]}
       />
       <mesh
@@ -919,14 +1236,24 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.05, 0.3, -13.87, -1.24);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Nyamishaba",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 66cm/49cm",
+            ],
+          };
+          store.artistLink = "/artists/habumugisha-obed";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-01104"].geometry}
         material={materials["ARTWORKS DETAILS-01.021"]}
-        position={[2.022, 0.314, -19.175]}
-        rotation={[Math.PI / 2, 0, 1.255]}
+        material-map={obedArtTwo}
+        position={[1.99, 0.314, -19.165]}
+        rotation={[-Math.PI / 2, 0, -1.255]}
         scale={0.51}
       />
       <mesh
@@ -937,14 +1264,24 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.55, 0.29, -11.9, -1.3);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Portrait of gorilla",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 150cm/120cm",
+            ],
+          };
+          store.artistLink = "/artists/elysee-mushimiyimana";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-01101"].geometry}
         material={materials["ARTWORKS DETAILS-01.024"]}
-        position={[2.556, 0.305, -17.195]}
-        rotation={[Math.PI / 2, 0, 1.33]}
+        material-map={elyseeArtSix}
+        position={[2.52, 0.305, -17.195]}
+        rotation={[-Math.PI * 0.5, 0, -Math.PI * 0.4]}
         scale={0.541}
       />
       <mesh
@@ -955,15 +1292,25 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.7, 0.29, -10.89, -1.4);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Budike",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 100cm/95cm",
+            ],
+          };
+          store.artistLink = "/artists/elysee-mushimiyimana";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-01100"].geometry}
         material={materials["ARTWORKS DETAILS-01.025"]}
+        material-map={elyseeArtSeven}
         position={[2.75, 0.326, -16.166]}
-        rotation={[Math.PI / 2, 0, 1.407]}
-        scale={0.482}
+        rotation={[-Math.PI * 0.5, 0, Math.PI * 0.55]}
+        scale={[0.4, 0.482, 0.482]}
       />
       <mesh
         onClick={() => {
@@ -973,14 +1320,24 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-0.3, 0.31, -15.2, 1.2);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Portrait of king Mutara lll Rudahigwa",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 97cm/165cm",
+            ],
+          };
+          store.artistLink = "/artists/elysee-mushimiyimana";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-01097"].geometry}
         material={materials["ARTWORKS DETAILS-01.028"]}
-        position={[-0.172, 0.303, -20.179]}
-        rotation={[-Math.PI / 2, 0, 1.201]}
+        material-map={elyseeArtThree}
+        position={[-0.172, 0.325, -20.179]}
+        rotation={[Math.PI / 2, 0, -1.201]}
         scale={-0.524}
       />
       <mesh
@@ -991,14 +1348,24 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-0.7, 0.32, -14.2, 1.25);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Nyamishaba",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: : 66cm/49cm ",
+            ],
+          };
+          store.artistLink = "/artists/habumugisha-obed";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-01095"].geometry}
         material={materials["ARTWORKS DETAILS-01.030"]}
-        position={[-0.552, 0.317, -19.176]}
-        rotation={[-Math.PI / 2, 0, 1.255]}
+        material-map={obedArtThree}
+        position={[-0.552, 0.33, -19.176]}
+        rotation={[Math.PI / 2, 0, -1.255]}
         scale={-0.507}
       />
       <mesh
@@ -1009,14 +1376,24 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-1.3, 0.34, -12.23, 1.3);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Mamamwiza",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 120cm/140cm",
+            ],
+          };
+          store.artistLink = "/artists/habumugisha-obed";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-01077"].geometry}
         material={materials["ARTWORKS DETAILS-01.032"]}
-        position={[-1.084, 0.31, -17.193]}
-        rotation={[-Math.PI / 2, 0, 1.3]}
+        material-map={obedArtFour}
+        position={[-1.084, 0.39, -17.2]}
+        rotation={[Math.PI / 2, 0, -1.3]}
         scale={-0.541}
       />
       <mesh
@@ -1027,15 +1404,25 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-1.52, 0.33, -11.24, 1.41);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Portrait of queen Gicanda",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 97cm/165cm",
+            ],
+          };
+          store.artistLink = "/artists/elysee-mushimiyimana";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-01074"].geometry}
         material={materials["ARTWORKS DETAILS-01.034"]}
-        position={[-1.296, 0.287, -16.169]}
-        rotation={[-Math.PI / 2, 0, 1.407]}
-        scale={-0.538}
+        material-map={elyseeArtTwo}
+        position={[-1.276, 0.382, -16.169]}
+        rotation={[Math.PI / 2, 0, -1.407]}
+        scale={[-0.48, -0.48, -0.55]}
       />
       <mesh
         onClick={() => {
@@ -1045,15 +1432,25 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(-1.55, 0.3, -10.35, 1.52);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Adherent",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 100cm/140cm",
+            ],
+          };
+          store.artistLink = "/artists/habumugisha-obed";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}
         onPointerLeave={() => setIsHovered(false)}
         geometry={nodes["ARTWORKS_DETAILS-01066"].geometry}
         material={materials["ARTWORKS DETAILS-01.036"]}
+        material-map={obedArtOne}
         position={[-1.37, 0.322, -15.175]}
-        rotation={[-Math.PI / 2, 0, 1.514]}
-        scale={-0.541}
+        rotation={[Math.PI / 2, 0, -1.514]}
+        scale={[-0.42, -0.541, -0.7]}
       />
       <mesh
         onClick={() => {
@@ -1063,6 +1460,15 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
             moveCamera(1.75, 0.27, -9.93, -1.51);
           }
           storePreviousCameraLocation();
+          store.frameInfo = {
+            title: "Hunter",
+            detail: [
+              "Original painting",
+              "Acrylic on canvas",
+              "Size: 120cm/120cm",
+            ],
+          };
+          store.artistLink = "/artists/habumugisha-obed";
           frameTl.current!.reversed(false);
         }}
         onPointerEnter={() => setIsHovered(true)}

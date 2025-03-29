@@ -8,14 +8,16 @@ type Store = {
   moveToFirstRoom: () => void;
   moveToSecondRoom: () => void;
   moveToThirdRoom: () => void;
+  frameInfo: { title: string; detail: string[] };
 };
 
 export const store = proxy<Store>({
   isCartActive: false,
-  artistLink: "/",
+  artistLink: "/artists/habyarimana-iddy",
   moveCamera: () => {},
   previousLocation: { x: 0, y: 0, z: 0, rotateY: 0 },
   moveToFirstRoom: () => {},
   moveToSecondRoom: () => {},
   moveToThirdRoom: () => {},
+  frameInfo: { title: "", detail: ["", "", ""] },
 });

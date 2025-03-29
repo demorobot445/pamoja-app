@@ -37,7 +37,7 @@ const Meaning = () => {
           </p>
         </div>
       </div>
-      <p className="text-center max-w-[800px] font-vietnam-pro text-xl leading-loose">
+      <p className="text-center max-w-[800px] font-vietnam-pro leading-loose">
         The logo combines two different symbols from African culture that
         represent unity By hand-drawing and then digitalizing the illustration,
         the style of this logo aims to recreate the hand-drawn tribal art of
