@@ -35,7 +35,7 @@ export default function Home() {
         <HeaderV2 isRoom />
       </div>
       <div
-        className={`fixed z-10 bottom-10 -translate-x-1/2 left-1/2 ${
+        className={`fixed z-10 bottom-10 pointer-events-none -translate-x-1/2 left-1/2 ${
           isMenuShow ? "opacity-0" : "opacity-100"
         } transition-opacity`}
       >
