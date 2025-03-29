@@ -6,7 +6,7 @@ const Hero = () => {
       <h1 className="text-4xl lg:text-6xl uppercase font-vietnam-pro text-center font-bold">
         MEET THE
         <br />
-        <span className="text-primary text-6xl lg:text-8xl">ARTISTS</span>
+        <span className="text-primary text-6xl lg:text-8xl">ARTIST</span>
       </h1>
       <TextLogo />
     </section>

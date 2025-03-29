@@ -9,6 +9,7 @@ type Store = {
   moveToSecondRoom: () => void;
   moveToThirdRoom: () => void;
   frameInfo: { title: string; detail: string[] };
+  isMenuShow: boolean;
 };
 
 export const store = proxy<Store>({
@@ -20,4 +21,5 @@ export const store = proxy<Store>({
   moveToSecondRoom: () => {},
   moveToThirdRoom: () => {},
   frameInfo: { title: "", detail: ["", "", ""] },
+  isMenuShow: false,
 });

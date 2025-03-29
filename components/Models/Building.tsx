@@ -146,10 +146,6 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
 
   const { camera } = useThree();
 
-  const [isHovered, setIsHovered] = useState<boolean>(false);
-
-  useCursor(isHovered);
-
   const { moveCamera } = useSnapshot(store);
 
   const storePreviousCameraLocation = () => {
@@ -227,6 +223,10 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
     obedArtFour.flipY = true;
     obedArtFour.needsUpdate = true;
   }, []);
+
+  const [isHovered, setIsHovered] = useState<boolean>(false);
+
+  useCursor(isHovered);
 
   return (
     <group position={[-0.6, 0, 5]} dispose={null}>

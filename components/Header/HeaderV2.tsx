@@ -114,7 +114,10 @@ const HeaderV2: React.FC<Props> = ({ isRoom = false, isColor = false }) => {
               >
                 About Us
               </Link>
-              <Link className="text-xs font-vietnam-pro uppercase" href="/">
+              <Link
+                className="text-xs font-vietnam-pro uppercase"
+                href="/artists"
+              >
                 Artists
               </Link>
               <Link

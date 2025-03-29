@@ -6,17 +6,17 @@ import Footer from "@/components/Footer/Footer";
 import HeaderV2 from "@/components/Header/HeaderV2";
 import Head from "next/head";
 
-export default function HabyarimanaIddy() {
+export default function HabumugishaObed() {
   return (
     <>
       <Head>
-        <title>Pamoja Application - {"HABYARIMANA IDDY"}</title>
+        <title>Pamoja Application - {"HABUMUGISHA OBED"}</title>
       </Head>
       <HeaderV2 isColor />
       <Hero />
       <Carousel
-        name={"HABYARIMANA IDDY"}
-        imageUrl={"/profile-pictures/iddy.jpg"}
+        name={"HABUMUGISHA OBED"}
+        imageUrl={"/profile-pictures/obed.jpg"}
       />
       <Description
         name={"HABYARIMANA IDDY"}
