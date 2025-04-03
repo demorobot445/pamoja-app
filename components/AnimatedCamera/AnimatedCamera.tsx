@@ -60,6 +60,11 @@ const AnimatedCamera = ({
             scrub: 1,
             pin: true,
             end: `bottom+=${innerHeight * 40} bottom`,
+            onLeave: () => {
+              gsap.to(window, {
+                scrollTo: labelToScroll(gsapTimeline.current!, "first-room"),
+              });
+            },
           },
         })
         .addLabel("first-room")
