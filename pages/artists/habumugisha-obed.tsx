@@ -7,6 +7,90 @@ import HeaderV2 from "@/components/Header/HeaderV2";
 import Head from "next/head";
 
 export default function HabumugishaObed() {
+  const data = [
+    {
+      imageUrl: "/obed-artwork/0.jpg",
+      details: [
+        "Title: adherent",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 100cm/ 140cm",
+      ],
+    },
+    {
+      imageUrl: "/obed-artwork/1.jpg",
+      details: [
+        "Title: nyamishaba",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 66cm/ 49cm",
+      ],
+    },
+    {
+      imageUrl: "/obed-artwork/2.jpg",
+      details: [
+        "Title: nyamishaba",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 66cm/ 49cm",
+      ],
+    },
+    {
+      imageUrl: "/obed-artwork/3.jpg",
+      details: [
+        "Title: mamamwiza",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 120cm/ 140cm",
+      ],
+    },
+    {
+      imageUrl: "/obed-artwork/4.jpg",
+      details: [
+        "Title: cyato landscape 1",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 90cm/ 120cm",
+      ],
+    },
+    {
+      imageUrl: "/obed-artwork/5.jpg",
+      details: [
+        "Title: nyamishaba",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 66cm/ 49cm",
+      ],
+    },
+    {
+      imageUrl: "/obed-artwork/6.jpg",
+      details: [
+        "Title: ibirunga [volcanoes]",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 66cm/ 49cm",
+      ],
+    },
+    {
+      imageUrl: "/obed-artwork/7.jpg",
+      details: [
+        "Title: liberity l",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 160cm/ 105cm",
+      ],
+    },
+    {
+      imageUrl: "/obed-artwork/8.jpg",
+      details: [
+        "Title: hunter",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 120cm/ 120cm ",
+      ],
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -27,7 +111,7 @@ export default function HabumugishaObed() {
           "Habyarimana believes that 'art is life, and painting is oxygen.' To him, art is a vital force that brings joy, freedom, and an ongoing opportunity to learn. It allows him to connect with people and express the deeper meanings behind their visual language, sharing those experiences with the world.",
         ]}
       />
-      <Artwork />
+      <Artwork data={data} name={"HABUMUGISHA OBED"} />
       <Footer />
     </>
   );

@@ -1,25 +1,25 @@
 import { store } from "@/store";
 import Image from "next/image";
-import { useCart } from "react-use-cart";
+// import { useCart } from "react-use-cart";
 
 const Shop = () => {
-  const { addItem } = useCart();
+  // const { addItem } = useCart();
 
-  const handleAddToCart = (
-    id: number,
-    price: number,
-    name: string,
-    image: string
-  ) => {
-    addItem({
-      id: `${id}`,
-      name,
-      price,
-      quantity: 1,
-      image,
-    });
-    store.isCartActive = true;
-  };
+  // const handleAddToCart = (
+  //   id: number,
+  //   price: number,
+  //   name: string,
+  //   image: string
+  // ) => {
+  //   addItem({
+  //     id: `${id}`,
+  //     name,
+  //     price,
+  //     quantity: 1,
+  //     image,
+  //   });
+  //   store.isCartActive = true;
+  // };
 
   return (
     <section className="flex flex-wrap ">
@@ -27,11 +27,11 @@ const Shop = () => {
         return (
           <div
             key={i}
-            onClick={() => handleAddToCart(i, 50, e, `/shop/${i}.png`)}
+            // onClick={() => handleAddToCart(i, 50, e, `/shop/${i}.png`)}
             className="w-full cursor-pointer group lg:w-1/2 relative overflow-hidden"
           >
             <Image
-              className="w-full h-full"
+              className="w-full h-full object-cover"
               src={`/shop/${i}.png`}
               alt="product-img"
               height={1080}

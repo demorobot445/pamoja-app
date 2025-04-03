@@ -9,13 +9,10 @@ const Description: React.FC<Props> = ({ name, paragraph }) => {
       <h3 className="text-4xl mb-10 text-primary uppercase font-bold font-vietnam-pro">
         {name}
       </h3>
-      <div className="max-w-[750px] mx-auto flex flex-col gap-16">
+      <div className="max-w-[750px] lg:text-center mx-auto flex flex-col gap-10 lg:gap-16">
         {paragraph.map((elem, i) => {
           return (
-            <p
-              key={i}
-              className="text-center font-bold font-vietnam-pro uppercase"
-            >
+            <p key={i} className="font-vietnam-pro uppercase">
               {elem}
             </p>
           );

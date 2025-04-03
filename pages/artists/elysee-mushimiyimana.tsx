@@ -7,6 +7,81 @@ import HeaderV2 from "@/components/Header/HeaderV2";
 import Head from "next/head";
 
 export default function ElyseeMushimiyimana() {
+  const data = [
+    {
+      imageUrl: "/elysee-artwork/0.jpg",
+      details: [
+        "Title: umwali",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 100cm/ 95cm",
+      ],
+    },
+    {
+      imageUrl: "/elysee-artwork/1.jpg",
+      details: [
+        "Title: portrait of queen Gicanda",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 97cm/ 165cm",
+      ],
+    },
+    {
+      imageUrl: "/elysee-artwork/2.jpg",
+      details: [
+        "Title: portrait of king Mutara lll Rudahigwa",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 97cm/ 165cm",
+      ],
+    },
+    {
+      imageUrl: "/elysee-artwork/3.jpg",
+      details: [
+        "Title: purity",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 12ocm/ 90cm",
+      ],
+    },
+    {
+      imageUrl: "/elysee-artwork/4.jpg",
+      details: [
+        "Title: wine date",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 85cm/ 105cm",
+      ],
+    },
+    {
+      imageUrl: "/elysee-artwork/5.jpg",
+      details: [
+        "Title: portrait of gorilla",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 150cm/ 120cm",
+      ],
+    },
+    {
+      imageUrl: "/elysee-artwork/6.jpg",
+      details: [
+        "Title: budike",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 100cm/ 95cm",
+      ],
+    },
+    {
+      imageUrl: "/elysee-artwork/7.jpg",
+      details: [
+        "Title: tea",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 130cm/ 100cm",
+      ],
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -27,7 +102,7 @@ export default function ElyseeMushimiyimana() {
           "For him, art is not only a form of personal expression but a source of income and a medium to inspire and connect with people on a profound level. Elysee Mushimiyimana envisions his art as a vehicle to make the world more beautiful, convey his sentiments, generate livelihood, and inspire individuals across diverse backgrounds.",
         ]}
       />
-      <Artwork />
+      <Artwork data={data} name={"ELYSEE MUSHIMIYIMANA"} />
       <Footer />
     </>
   );

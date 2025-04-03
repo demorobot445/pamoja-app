@@ -7,6 +7,35 @@ import HeaderV2 from "@/components/Header/HeaderV2";
 import Head from "next/head";
 
 export default function IshimweShemaB() {
+  const data = [
+    {
+      imageUrl: "/shema-artwork/0.jpg",
+      details: [
+        "Title: emancipation III",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 115cm/ 100cm",
+      ],
+    },
+    {
+      imageUrl: "/shema-artwork/1.jpg",
+      details: [
+        "Title: RWANDA NZIZA",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 80cm/ 70cm",
+      ],
+    },
+    {
+      imageUrl: "/shema-artwork/2.jpg",
+      details: [
+        "Title: emancipation II",
+        "Original artwork",
+        "Acrylic on canvas",
+        "Size: 130cm/103cm",
+      ],
+    },
+  ];
   return (
     <>
       <Head>
@@ -26,7 +55,7 @@ export default function IshimweShemaB() {
           "His art is inspired by a belief in the power of humanity, peace, and love, as he strives to convey meaningful messages through his creations.",
         ]}
       />
-      <Artwork />
+      <Artwork data={data} name={"ISHIMWE SHEMA B."} />
       <Footer />
     </>
   );

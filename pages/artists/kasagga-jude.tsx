@@ -1,4 +1,4 @@
-import Artwork from "@/components/Artists/Artwork";
+// import Artwork from "@/components/Artists/Artwork";
 import Carousel from "@/components/Artists/Carousel";
 import Description from "@/components/Artists/Description";
 import Hero from "@/components/Artists/Hero";
@@ -30,7 +30,7 @@ export default function KasaggaJude() {
           "Kasagga Jude has left his creative imprint on a multitude of art exhibitions and fairs, including notable events like the Njovu Artists Exhibition in 2011, the Kenya Art Fair in 2015, and the Githeri Fry Art Exhibition in 2016. His passion for art extends beyond the canvas, and his commitment to the art world continues to resonate with art lovers and collectors.",
         ]}
       />
-      <Artwork />
+      {/* <Artwork name={"Kasagga Jude"} /> */}
       <Footer />
     </>
   );

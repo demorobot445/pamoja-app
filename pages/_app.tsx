@@ -3,7 +3,7 @@ import "@/styles/globals.css";
 import type { AppProps } from "next/app";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import { CartProvider } from "react-use-cart";
+// import { CartProvider } from "react-use-cart";
 import ScrollToPlugin from "gsap/dist/ScrollToPlugin";
 
 const beVietnamPro = Be_Vietnam_Pro({
@@ -19,9 +19,9 @@ export default function App({ Component, pageProps }: AppProps) {
     <main
       className={`${beVietnamPro.variable} font-sans overflow-x-hidden bg-background`}
     >
-      <CartProvider>
-        <Component {...pageProps} />
-      </CartProvider>
+      {/* <CartProvider> */}
+      <Component {...pageProps} />
+      {/* </CartProvider> */}
     </main>
   );
 }
