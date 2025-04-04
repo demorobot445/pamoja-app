@@ -138,11 +138,13 @@ type GLTFResult = GLTF & {
 };
 
 type Props = {
-  frameTl: React.MutableRefObject<gsap.core.Timeline | undefined>;
+  frameTl: React.RefObject<gsap.core.Timeline | null>;
 };
 
 export const Building: React.FC<Props> = ({ frameTl }) => {
-  const { nodes, materials } = useGLTF("/building.glb") as GLTFResult;
+  const { nodes, materials } = useGLTF(
+    "/building.glb"
+  ) as unknown as GLTFResult;
 
   const { camera } = useThree();
 
@@ -222,7 +224,23 @@ export const Building: React.FC<Props> = ({ frameTl }) => {
     obedArtThree.needsUpdate = true;
     obedArtFour.flipY = true;
     obedArtFour.needsUpdate = true;
-  }, []);
+  }, [
+    shemaArtOne,
+    shemaArtTwo,
+    shemaArtThree,
+    elyseeArtOne,
+    elyseeArtTwo,
+    elyseeArtThree,
+    elyseeArtFour,
+    elyseeArtFive,
+    elyseeArtSix,
+    elyseeArtSeven,
+    elyseeArtEight,
+    obedArtOne,
+    obedArtTwo,
+    obedArtThree,
+    obedArtFour,
+  ]);
 
   const [isHovered, setIsHovered] = useState<boolean>(false);
 

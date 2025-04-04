@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const Header = ({ isFixed }: { isFixed?: boolean }) => {
-  const tl = useRef<GSAPTimeline>();
+  const tl = useRef<GSAPTimeline>(null);
   const containerRef = useRef<HTMLHeadElement>(null);
   const [isActive, setIsActive] = useState<boolean>(false);
 

@@ -14,7 +14,7 @@ const Artwork: React.FC<Props> = ({ name, data }) => {
             ARTWORKS DETAILS
           </h3>
           <h3 className="text-4xl uppercase font-bold font-vietnam-pro">
-            {name}'S PORTFOLIO
+            {name}&apos;S PORTFOLIO
           </h3>
         </div>
         <div className="flex flex-col items-center justify-center gap-24">

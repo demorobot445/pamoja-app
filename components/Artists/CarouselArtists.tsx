@@ -5,9 +5,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import Link from "next/link";
 
-type Props = {};
-
-const CarouselArtists: React.FC<Props> = () => {
+const CarouselArtists = () => {
   const data = [
     {
       name: "ELYSEE MUSHIMIYIMANA",

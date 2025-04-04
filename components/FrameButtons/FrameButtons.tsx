@@ -7,7 +7,7 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 
 type Props = {
-  frameTl: React.MutableRefObject<gsap.core.Timeline | undefined>;
+  frameTl: React.RefObject<gsap.core.Timeline | null>;
 };
 
 const FrameButtons: React.FC<Props> = ({ frameTl }) => {
@@ -49,7 +49,7 @@ const FrameButtons: React.FC<Props> = ({ frameTl }) => {
     >
       <button
         onClick={handleClose}
-        className="btn h-16 w-16 bg-black absolute top-4 rounded-full right-4 flex items-center justify-center z-10"
+        className="btn h-16 w-16 bg-black cursor-pointer absolute top-4 rounded-full right-4 flex items-center justify-center z-10"
       >
         <CloseWhite />
       </button>

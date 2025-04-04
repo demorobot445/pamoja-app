@@ -1,5 +1,4 @@
 import CarouselArtists from "@/components/Artists/CarouselArtists";
-import Hero from "@/components/Artists/Hero";
 import Footer from "@/components/Footer/Footer";
 import HeaderV2 from "@/components/Header/HeaderV2";
 import TextLogo from "@/components/Svgs/TextLogo";

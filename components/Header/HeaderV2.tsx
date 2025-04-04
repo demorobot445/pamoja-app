@@ -19,7 +19,7 @@ const HeaderV2: React.FC<Props> = ({ isRoom = false, isColor = false }) => {
 
   const container = useRef<HTMLElement>(null);
 
-  const tl = useRef<GSAPTimeline>();
+  const tl = useRef<GSAPTimeline>(null);
 
   const { contextSafe } = useGSAP(
     () => {
@@ -69,7 +69,7 @@ const HeaderV2: React.FC<Props> = ({ isRoom = false, isColor = false }) => {
             onClick={handleClick}
             className={`absolute z-10 top-0 right-0 group h-10 w-10 ${
               isColor ? "bg-primary" : "bg-white"
-            } rounded-md p-[0.63em] flex items-center justify-center`}
+            } rounded-md p-[0.63em] flex items-center justify-center cursor-pointer`}
           >
             <div
               className={`absolute h-[0.38em] w-[0.38em] ${
@@ -95,7 +95,7 @@ const HeaderV2: React.FC<Props> = ({ isRoom = false, isColor = false }) => {
           <div className="cover flex flex-col gap-8 opacity-0">
             <button
               onClick={handleContactOpen}
-              className="font-vietnam-pro text-xs rounded-full px-3 py-1.5 bg-primary w-fit flex items-center justify-center gap-1"
+              className="font-vietnam-pro cursor-pointer text-xs rounded-full px-3 py-1.5 bg-primary w-fit flex items-center justify-center gap-1"
             >
               <span className="block rounded-full h-1.5 w-1.5 bg-black" />
               Contact us
@@ -137,21 +137,21 @@ const HeaderV2: React.FC<Props> = ({ isRoom = false, isColor = false }) => {
         <div className="h-10 w-full fixed z-10 bottom-5 lg:bottom-10 flex items-center gap-4 lg:gap-10 justify-center">
           <button
             onClick={moveToFirstRoom}
-            className="font-vietnam-pro text-xs lg:text-base uppercase rounded-full px-3 py-1.5 text-white font-bold w-fit flex items-center justify-center gap-1"
+            className="font-vietnam-pro cursor-pointer text-xs lg:text-base uppercase rounded-full px-3 py-1.5 text-white font-bold w-fit flex items-center justify-center gap-1"
           >
             <span className="block rounded-full h-1.5 w-1.5 bg-primary" />
             room 1
           </button>
           <button
             onClick={moveToSecondRoom}
-            className="font-vietnam-pro text-xs lg:text-base uppercase rounded-full px-3 py-1.5 text-white font-bold w-fit flex items-center justify-center gap-1"
+            className="font-vietnam-pro cursor-pointer text-xs lg:text-base uppercase rounded-full px-3 py-1.5 text-white font-bold w-fit flex items-center justify-center gap-1"
           >
             <span className="block rounded-full h-1.5 w-1.5 bg-primary" />
             room 2
           </button>
           <button
             onClick={moveToThirdRoom}
-            className="font-vietnam-pro text-xs lg:text-base uppercase rounded-full px-3 py-1.5 text-white font-bold w-fit flex items-center justify-center gap-1"
+            className="font-vietnam-pro cursor-pointer text-xs lg:text-base uppercase rounded-full px-3 py-1.5 text-white font-bold w-fit flex items-center justify-center gap-1"
           >
             <span className="block rounded-full h-1.5 w-1.5 bg-primary" />
             room 3

@@ -1,62 +1,33 @@
 import { store } from "@/store";
 import { useGSAP } from "@gsap/react";
-import { Box, PerspectiveCamera, useCursor } from "@react-three/drei";
+import { PerspectiveCamera } from "@react-three/drei";
 import gsap from "gsap";
-import { Suspense, useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { PerspectiveCamera as PC } from "three";
-import { Arrow } from "../Models/Arrow";
-// import { Pane } from "tweakpane";
 
 const AnimatedCamera = ({
   containerRef,
 }: {
-  containerRef: React.RefObject<HTMLDivElement>;
+  containerRef: React.RefObject<HTMLDivElement | null>;
 }) => {
   const cameraRef = useRef<PC>(null);
 
   const gsapTimeline = useRef<GSAPTimeline | null>(null);
 
-  // useEffect(() => {
-  //   const pane = new Pane();
-
-  //   pane.addBinding(cameraRef.current!.position, "x", {
-  //     min: -20,
-  //     max: 20,
-  //     step: 0.01,
-  //   });
-  //   pane.addBinding(cameraRef.current!.position, "y", {
-  //     min: -20,
-  //     max: 20,
-  //     step: 0.01,
-  //   });
-  //   pane.addBinding(cameraRef.current!.position, "z", {
-  //     min: -20,
-  //     max: 20,
-  //     step: 0.01,
-  //   });
-  //   pane.addBinding(cameraRef.current!.rotation, "y", {
-  //     min: -Math.PI * 2,
-  //     max: Math.PI * 2,
-  //     step: 0.01,
-  //   });
-  // }, []);
-
-  useEffect(() => {
-    store.moveCamera = (x, y, z, rotateY) => {
-      gsap
-        .timeline()
-        .to(cameraRef.current!.position, { x, y, z })
-        .to(cameraRef.current!.rotation, { y: rotateY }, "<");
-      gsap.set(document.body, { overflow: "hidden" });
-    };
-  }, []);
+  const labelToScroll = (timeline: GSAPTimeline, label: string) => {
+    const st = timeline.scrollTrigger!;
+    return (
+      st.start +
+      (st.end - st.start) * (timeline.labels[label] / timeline.duration())
+    );
+  };
 
   useGSAP(
     () => {
       gsapTimeline.current = gsap
         .timeline({
           scrollTrigger: {
-            trigger: containerRef.current!,
+            trigger: "#react-three-canvas",
             scrub: 1,
             pin: true,
             end: `bottom+=${innerHeight * 40} bottom`,
@@ -228,16 +199,18 @@ const AnimatedCamera = ({
         .to(cameraRef.current!.position, { x: -0.95, y: 0.27, z: -10.13 })
         .to(cameraRef.current!.rotation, { y: 1.52 }, "<");
     },
-    { dependencies: [containerRef] }
+    { scope: containerRef }
   );
 
-  function labelToScroll(timeline: GSAPTimeline, label: string) {
-    let st = timeline.scrollTrigger!;
-    return (
-      st.start +
-      (st.end - st.start) * (timeline.labels[label] / timeline.duration())
-    );
-  }
+  useEffect(() => {
+    store.moveCamera = (x, y, z, rotateY) => {
+      gsap
+        .timeline()
+        .to(cameraRef.current!.position, { x, y, z })
+        .to(cameraRef.current!.rotation, { y: rotateY }, "<");
+      gsap.set(document.body, { overflow: "hidden" });
+    };
+  }, []);
 
   useEffect(() => {
     store.moveToFirstRoom = () => {

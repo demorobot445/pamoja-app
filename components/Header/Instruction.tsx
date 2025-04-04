@@ -4,20 +4,20 @@ import { Html, useProgress } from "@react-three/drei";
 import { store } from "@/store";
 
 const Instruction = () => {
-  const { progress } = useProgress();
+  const { active } = useProgress();
   const overlayRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (progress === 100) {
+    if (!active) {
       gsap
         .timeline()
-        .to(overlayRef.current!, { opacity: 1 })
+        .to(overlayRef.current!, { opacity: 1, delay: 0.2 })
         .to(overlayRef.current!, { opacity: 0 }, ">1")
         .call(() => {
           store.isMenuShow = true;
         });
     }
-  }, [progress]);
+  }, [active]);
 
   return (
     <Html style={{ pointerEvents: "none" }} position={[0, 0.5, 0]} fullscreen>

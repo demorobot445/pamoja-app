@@ -8,8 +8,8 @@ const Description = () => {
 
   useGSAP(
     () => {
-      let mm = gsap.matchMedia(),
-        breakPoint = 800;
+      const mm = gsap.matchMedia();
+      const breakPoint = 800;
 
       mm.add(
         {
@@ -17,7 +17,10 @@ const Description = () => {
           isMobile: `(max-width: ${breakPoint - 1}px)`,
         },
         (context) => {
-          let { isDesktop } = context.conditions as any;
+          const { isDesktop } = context.conditions as {
+            isDesktop: boolean;
+            isMobile: boolean;
+          };
 
           const animation = gsap
             .timeline()
@@ -43,7 +46,7 @@ const Description = () => {
       className="container pt-32 mx-auto h-screen px-4 lg:px-0 lg:pb-16 flex flex-col gap-16"
     >
       <div className="flex flex-col gap-2 lg:gap-4">
-        <h1 className="font-vietnam-pro font-bold text-5xl lg:text-7xl uppercase">
+        <h1 className=" font-vietnam-pro font-bold text-5xl lg:text-7xl uppercase">
           About <span className="text-primary">us</span>
         </h1>
         <p className="font-vietnam-pro text-xl lg:text-2xl font-bold text-primary">
@@ -74,8 +77,8 @@ const Description = () => {
         <div className="box-3 bg-[#EBE4D5] w-full flex items-center justify-center rounded-2xl p-10 relative">
           <div className="absolute h-3 w-3 bg-primary left-3 top-3 rounded-full" />
           <p className="font-vietnam-pro max-w-[670px] leading-loose">
-            Pamoja is more than just a gallery; it's a vibrant community where
-            creativity flourishes, collaboration is encouraged, and
+            Pamoja is more than just a gallery; it&apos;s a vibrant community
+            where creativity flourishes, collaboration is encouraged, and
             opportunities for growth are abundant. Whether you are an emerging
             artist or an established creator, Pamoja supports your artistic
             journey.

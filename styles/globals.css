@@ -1,6 +1,11 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-vietnam-pro: "Be Vietnam Pro", sans-serif;
+  --color-white: #f4f4ec;
+  --color-primary: #d2681e;
+  --color-background: #efece3;
+}
 
 body {
   --swiper-theme-color: #ffffff;

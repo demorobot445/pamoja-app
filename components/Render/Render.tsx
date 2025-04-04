@@ -7,24 +7,26 @@ import { Building } from "../Models/Building";
 import Instruction from "../Header/Instruction";
 
 type Props = {
-  frameTl: React.MutableRefObject<gsap.core.Timeline | undefined>;
+  frameTl: React.RefObject<gsap.core.Timeline | null>;
 };
 
 const Render: React.FC<Props> = ({ frameTl }) => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   return (
-    <div ref={containerRef} className="h-lvh fixed inset-0">
-      <Canvas shadows={"soft"}>
-        <Instruction />
-        <AnimatedCamera containerRef={containerRef} />
-        <Environment preset="warehouse" />
-        <color args={[new Color("gray")]} attach={"background"} />
-        <Suspense fallback={null}>
-          <Building frameTl={frameTl} />
-        </Suspense>
-      </Canvas>
-      <Loader />
+    <div ref={containerRef}>
+      <div id="react-three-canvas" className="h-svh fixed inset-0">
+        <Canvas shadows={"soft"}>
+          <Instruction />
+          <AnimatedCamera containerRef={containerRef} />
+          <Environment preset="warehouse" />
+          <color args={[new Color("gray")]} attach={"background"} />
+          <Suspense fallback={null}>
+            <Building frameTl={frameTl} />
+          </Suspense>
+        </Canvas>
+        <Loader />
+      </div>
     </div>
   );
 };
