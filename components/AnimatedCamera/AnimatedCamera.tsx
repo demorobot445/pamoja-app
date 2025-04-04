@@ -88,7 +88,7 @@ const AnimatedCamera = ({
         .to(cameraRef.current!.rotation, { y: 1.52 }, "<")
 
         //first starting point
-        .to(cameraRef.current!.position, { x: 0, y: 0.5, z: 16.46 })
+        .to(cameraRef.current!.position, { x: 0.14, y: 0.5, z: 16.46 })
         .to(cameraRef.current!.rotation, { y: 0 }, "<")
 
         //second room
@@ -144,7 +144,7 @@ const AnimatedCamera = ({
         .to(cameraRef.current!.rotation, { y: 1.51 }, "<")
 
         //second starting point
-        .to(cameraRef.current!.position, { x: 0, y: 0.5, z: 4.42 })
+        .to(cameraRef.current!.position, { x: 0.14, y: 0.5, z: 4.42 })
         .to(cameraRef.current!.rotation, { y: 0 }, "<")
 
         //third room
@@ -244,7 +244,7 @@ const AnimatedCamera = ({
       <PerspectiveCamera
         ref={cameraRef}
         makeDefault
-        position={[0, 0.5, 16.46]}
+        position={[0.14, 0.5, 16.46]}
       />
     </>
   );

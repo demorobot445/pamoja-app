@@ -20,7 +20,11 @@ const Instruction = () => {
   }, [active]);
 
   return (
-    <Html style={{ pointerEvents: "none" }} position={[0, 0.5, 0]} fullscreen>
+    <Html
+      style={{ pointerEvents: "none" }}
+      position={[0.14, 0.5, 0]}
+      fullscreen
+    >
       <div
         ref={overlayRef}
         className="absolute opacity-0 z-[5] pointer-events-none w-full h-full bg-black/50 flex flex-col item-center justify-center"

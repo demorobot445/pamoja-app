@@ -15,7 +15,7 @@ const Render: React.FC<Props> = ({ frameTl }) => {
 
   return (
     <div ref={containerRef}>
-      <div id="react-three-canvas" className="h-svh fixed inset-0">
+      <div id="react-three-canvas" className="h-lvh fixed inset-0">
         <Canvas shadows={"soft"}>
           <Instruction />
           <AnimatedCamera containerRef={containerRef} />
