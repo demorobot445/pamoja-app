@@ -1,4 +1,4 @@
-// import Artwork from "@/components/Artists/Artwork";
+import Artwork from "@/components/Artists/Artwork";
 import Carousel from "@/components/Artists/Carousel";
 import Description from "@/components/Artists/Description";
 import Hero from "@/components/Artists/Hero";
@@ -26,7 +26,7 @@ export default function NiyonshimiyeCedrick() {
           "Wadam's artistic expression focuses on painting animals, Pan-Africanism art, and depictions of Africans in various styles, often incorporating elements like fur textures and binary numbers. His work is a celebration of cultural identity and personal narrative, beautifully decorating emotions through vibrant and thought-provoking imagery.",
         ]}
       />
-      {/* <Artwork name={"NIYONSHIMIYE CEDRICK"} /> */}
+      <Artwork data={[]} name={"NIYONSHIMIYE CEDRICK"} />
       <Footer />
     </>
   );

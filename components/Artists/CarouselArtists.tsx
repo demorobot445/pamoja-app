@@ -27,6 +27,16 @@ const CarouselArtists = () => {
       imgUrl: "/profile-pictures/obed.jpg",
       url: "/artists/habumugisha-obed",
     },
+    {
+      name: "NIYONSHIMIYE CEDRICK",
+      imgUrl: "/profile-pictures/cedrick.jpg",
+      url: "/artists/niyonshimiye-cedrick",
+    },
+    {
+      name: "NSENGIYUMVA YUSUF",
+      imgUrl: "/profile-pictures/yusuf.jpg",
+      url: "/artists/nsengiyumva-yusuf",
+    },
   ];
 
   return (

@@ -1,4 +1,4 @@
-// import Artwork from "@/components/Artists/Artwork";
+import Artwork from "@/components/Artists/Artwork";
 import Carousel from "@/components/Artists/Carousel";
 import Description from "@/components/Artists/Description";
 import Hero from "@/components/Artists/Hero";
@@ -16,7 +16,7 @@ export default function NsengiyumvaYusuf() {
       <Hero />
       <Carousel
         name={"NSENGIYUMVA YUSUF"}
-        imageUrl={"/profile-pictures/yusufu.jpg"} // update image
+        imageUrl={"/profile-pictures/yusuf.jpg"} // update image
       />
       <Description
         name={"NSENGIYUMVA YUSUF"}
@@ -25,7 +25,7 @@ export default function NsengiyumvaYusuf() {
           "Yusuf is particularly drawn to using collage techniques in his paintings, focusing on subjects that celebrate African art and culture. Through his work, he aims to blend traditional themes with contemporary expressions, offering a unique perspective on African identity.",
         ]}
       />
-      {/* <Artwork name={"NSENGIYUMVA YUSUF"} /> */}
+      <Artwork data={[]} name={"NSENGIYUMVA YUSUF"} />
       <Footer />
     </>
   );

@@ -103,12 +103,10 @@ export default function HabumugishaObed() {
         imageUrl={"/profile-pictures/obed.jpg"}
       />
       <Description
-        name={"HABYARIMANA IDDY"}
+        name={"HABUMUGISHA OBED"}
         paragraph={[
-          "Habyarimana Iddy, born in 1998 in Rusizi, Western Province, Rwanda, is a professional artist who lives and works in Rwanda. From a young age, Habyarimana dreamed of becoming an architect, but by the age of 15 he found himself drawn to the world of fine art. Influenced by his teachers and classmates who recognized his talent for capturing images from student books, he chose to pursue art in secondary school, eventually enrolling at École d'Art de Nyundo.",
-          "In 2016, Habyarimana put his first brush to canvas, embarking on a journey that would solidify his love for portraiture and figurative abstraction. His work often focuses on the lives and experiences of Black people, capturing moments of humanity with a focus on the unique aspects of individual faces. He has long been fascinated by how we share common physical features yet remain visually distinct from one another. This curiosity has driven him to study and portray these differences in his artwork.",
-          "Primarily working with oil paints and acrylics, Habyarimana’s portraits lean toward realism. His technique often involves the application of both thick and thin layers of paint, which lends depth and texture to his works. Through his art, he explores the complexities of identity and human connection.",
-          "Habyarimana believes that 'art is life, and painting is oxygen.' To him, art is a vital force that brings joy, freedom, and an ongoing opportunity to learn. It allows him to connect with people and express the deeper meanings behind their visual language, sharing those experiences with the world.",
+          "HABUMUGISHA Obed was born in 2002 and raised in Rwanda.from a young age ,they displayed a keen interest in art, frequently drawing, painting,and sculpting scenes inspired by their surroundings.Early exposure to local galleries and museums ignited a passion for creativity that would define their future artistic endeavors.",
+          "Hobed's work is a reflection of their deep connection to Rwandan culture and landscapes, blending traditional influences with contemporary artistic expressions.Through their art, HABUMUGISHA Obed seeks to capture and share the beauty and stories of their heritage, offering viewers a glimpse into the rich tapestry of Rwandan life.",
         ]}
       />
       <Artwork data={data} name={"HABUMUGISHA OBED"} />
