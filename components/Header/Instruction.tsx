@@ -11,7 +11,7 @@ const Instruction = () => {
     if (!active) {
       gsap
         .timeline()
-        .to(overlayRef.current!, { opacity: 1, delay: 0.2 })
+        .to(overlayRef.current!, { opacity: 1, delay: 0.3 })
         .to(overlayRef.current!, { opacity: 0 }, ">1")
         .call(() => {
           store.isMenuShow = true;
