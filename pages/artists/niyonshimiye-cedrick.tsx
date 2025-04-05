@@ -7,6 +7,72 @@ import HeaderV2 from "@/components/Header/HeaderV2";
 import Head from "next/head";
 
 export default function NiyonshimiyeCedrick() {
+  const data = [
+    {
+      imageUrl: "/cedrick-artwork/0.jpg",
+      details: [
+        "Title: aqua life",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 100cm/140cm",
+      ],
+    },
+    {
+      imageUrl: "/cedrick-artwork/1.jpg",
+      details: [
+        "Title: no matter what Mather is Mather",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 66cm/80cm",
+      ],
+    },
+    {
+      imageUrl: "/cedrick-artwork/2.jpg",
+      details: [
+        "Title: God of zebra = colors",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 106cm/73cm",
+      ],
+    },
+    {
+      imageUrl: "/cedrick-artwork/3.jpg",
+      details: [
+        "Title: east African birds",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 100cm/160cm",
+      ],
+    },
+    {
+      imageUrl: "/cedrick-artwork/4.jpg",
+      details: [
+        "Title: binary numbers",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 70cm/60cm",
+      ],
+    },
+    {
+      imageUrl: "/cedrick-artwork/5.jpg",
+      details: [
+        "Title: blessings",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 100cm/71cm",
+      ],
+    },
+    {
+      imageUrl: "/cedrick-artwork/6.jpg",
+      details: [
+        "Title: wastes over canvas",
+        "Original painting collage",
+        "Found objects Acrylic on canvas",
+        "Size: 113cm/64cm",
+      ],
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -26,7 +92,7 @@ export default function NiyonshimiyeCedrick() {
           "Wadam's artistic expression focuses on painting animals, Pan-Africanism art, and depictions of Africans in various styles, often incorporating elements like fur textures and binary numbers. His work is a celebration of cultural identity and personal narrative, beautifully decorating emotions through vibrant and thought-provoking imagery.",
         ]}
       />
-      <Artwork data={[]} name={"NIYONSHIMIYE CEDRICK"} />
+      <Artwork data={data} name={"NIYONSHIMIYE CEDRICK"} />
       <Footer />
     </>
   );

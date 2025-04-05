@@ -1,6 +1,6 @@
 import { Internet, Mail, Share } from "@/components/Contact/Svgs";
 import Footer from "@/components/Footer/Footer";
-import Header from "@/components/Header/Header";
+import HeaderV2 from "@/components/Header/HeaderV2";
 import Head from "next/head";
 import Link from "next/link";
 
@@ -10,8 +10,8 @@ export default function ContactPage() {
       <Head>
         <title>Pamoja Application - Contact</title>
       </Head>
-      <Header />
-      <main className="flex flex-col gap-4 py-10 px-4 max-w-[600px] mx-auto">
+      <HeaderV2 isColor />
+      <main className="flex mt-[80px] lg:mt-[120px] flex-col gap-4 py-10 px-4 max-w-[600px] mx-auto">
         <h1 className="text-5xl lg:text-7xl text-primary font-bold font-vietnam-pro drop-shadow-[1px_1px_3px_rgba(210,104,30,1)]">
           Contact
         </h1>
@@ -22,10 +22,10 @@ export default function ContactPage() {
 
           <Link
             className="flex gap-2 items-center"
-            href="mailto:riarwayitare@pamoja.art"
+            href="mailto:riawayitare@pamoja.art"
           >
             <Mail />
-            <span>riarwayitare@pamoja.art</span>
+            <span>riawayitare@pamoja.art</span>
           </Link>
           <Link
             className="flex gap-2 items-center"

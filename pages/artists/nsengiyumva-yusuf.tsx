@@ -7,6 +7,54 @@ import HeaderV2 from "@/components/Header/HeaderV2";
 import Head from "next/head";
 
 export default function NsengiyumvaYusuf() {
+  const data = [
+    {
+      imageUrl: "/yusuf-artwork/0.jpg",
+      details: [
+        "Title: Lion",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 58cm/ 60cm",
+      ],
+    },
+    {
+      imageUrl: "/yusuf-artwork/1.jpg",
+      details: [
+        "Title: dance in colors",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 120cm/ 140cm",
+      ],
+    },
+    {
+      imageUrl: "/yusuf-artwork/2.jpg",
+      details: [
+        "Title: b0b",
+        "Original painting",
+        "Plastic shoes fabrics and acrylic on canvas",
+        "Size: 145cm/ 180cm",
+      ],
+    },
+    {
+      imageUrl: "/yusuf-artwork/3.jpg",
+      details: [
+        "Title: kumwaro",
+        "Original painting",
+        "Acrylic on canvas",
+        "Size: 67cm/ 57cm",
+      ],
+    },
+    {
+      imageUrl: "/yusuf-artwork/4.jpg",
+      details: [
+        "Title: relationship",
+        "Original painting",
+        "Plastic shoes fabrics and acrylic on canvas",
+        "Size: 60cm/ 60cm",
+      ],
+    },
+  ];
+
   return (
     <>
       <Head>
@@ -25,7 +73,7 @@ export default function NsengiyumvaYusuf() {
           "Yusuf is particularly drawn to using collage techniques in his paintings, focusing on subjects that celebrate African art and culture. Through his work, he aims to blend traditional themes with contemporary expressions, offering a unique perspective on African identity.",
         ]}
       />
-      <Artwork data={[]} name={"NSENGIYUMVA YUSUF"} />
+      <Artwork data={data} name={"NSENGIYUMVA YUSUF"} />
       <Footer />
     </>
   );

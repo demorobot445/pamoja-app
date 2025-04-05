@@ -12,7 +12,7 @@ const Footer = () => {
         <Link href="/about">about us</Link>
         <Link href="/artists">artist</Link>
         <Link href="/shop">shop</Link>
-        <Link href="/">contact</Link>
+        <Link href="/contact">contact</Link>
         <Link href="/events">events</Link>
       </div>
       <p className="text-xs font-vietnam-pro text-center uppercase relative z-10 text-white">

@@ -244,7 +244,7 @@ const AnimatedCamera = ({
       <PerspectiveCamera
         ref={cameraRef}
         makeDefault
-        position={[0.14, 0.5, 16.46]}
+        position={[0.125, 0.5, 17.5]}
       />
     </>
   );
