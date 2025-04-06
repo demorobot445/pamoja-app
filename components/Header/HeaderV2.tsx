@@ -7,6 +7,8 @@ import Image from "next/image";
 import { useSnapshot } from "valtio";
 import { store } from "@/store";
 import ColorLogo from "./ColorLogo";
+import Person from "../Svgs/Person";
+import CloseWhite from "../Svgs/CloseWhite";
 
 type Props = {
   isRoom?: boolean;
@@ -53,14 +55,27 @@ const HeaderV2: React.FC<Props> = ({ isRoom = false, isColor = false }) => {
         ref={container}
         className="fixed pointer-events-none gap-4 lg:gap-0  w-full z-20 top-0 left-0 flex justify-between p-5 lg:p-10"
       >
-        <Image
-          onClick={handleContactClose}
-          className="contact-info cursor-pointer object-contain pointer-events-auto  fixed z-10 -top-full right-0 w-48 lg:w-80"
-          src="/contact.png"
-          height={400}
-          width={400}
-          alt="contact-info"
-        />
+        <div className="contact-info pointer-events-auto fixed z-10  -top-full right-0 w-48 lg:w-80">
+          <Person />
+          <button
+            onClick={handleContactClose}
+            className="flex cursor-pointer flex-col items-center justify-center h-8 w-8 lg:h-12 lg:w-12 bg-primary rounded-full absolute right-10 lg:right-18 bottom-[100px] lg:bottom-42 *:w-5 *:h-5 lg:*:w-8 lg:*:h-8"
+          >
+            <CloseWhite />
+          </button>
+          <div className="flex flex-col absolute gap-5 left-1/2 -translate-x-1/2 top-6 lg:top-16 text-[8px] lg:text-xs">
+            <h1 className="text-center font-vietnam-pro text-primary">
+              CEO & FOUNDER
+              <br /> <span className="font-bold">Ria Rwayitarev</span>
+            </h1>
+            <h2 className="text-center font-vietnam-pro text-primary">
+              riawayitare@pamoja.art
+              <br /> @we.are.pamoja
+              <br /> www.pamoja.art
+            </h2>
+          </div>
+        </div>
+
         <Link href="/" className="h-10 pointer-events-auto">
           {isColor ? <ColorLogo /> : <Logo />}
         </Link>

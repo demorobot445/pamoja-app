@@ -67,7 +67,7 @@ const FrameButtons: React.FC<Props> = ({ frameTl }) => {
           </div>
         </div>
         <hr className="fade border-black/50" />
-        <div className="flex flex-col lg:flex-row gap-4">
+        <div className="flex flex-col lg:flex-row gap-4 overflow-visible">
           <Link
             href="mailto:riawayitare@pamoja.art"
             className="fade text-xs w-fit whitespace-nowrap cursor-pointer font-vietnam-pro font-medium uppercase py-4 px-11 bg-black text-white rounded-full"
