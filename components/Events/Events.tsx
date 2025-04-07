@@ -51,7 +51,7 @@ const Events = () => {
         </div>
       </div>
       <div className="flex flex-col container px-4 lg:px-0 mx-auto gap-28">
-        {["Thur, Dec 19", "Thur, Dec 19"].map((e, i) => {
+        {["Thur, Dec 19"].map((e, i) => {
           return <Card key={i} title={e} />;
         })}
       </div>

@@ -149,6 +149,13 @@ const HeaderV2: React.FC<Props> = ({ isRoom = false, isColor = false }) => {
         </div>
       </header>
       {isRoom ? (
+        <p className="fixed z-10 text-center text-white font-vietnam-pro w-full bottom-2 lg:bottom-3 text-xs lg:text-sm">
+          Designed and Developed by Mars Black
+        </p>
+      ) : (
+        <></>
+      )}
+      {isRoom ? (
         <div className="h-10 w-full fixed z-10 bottom-5 lg:bottom-10 flex items-center gap-4 lg:gap-10 justify-center">
           <button
             onClick={moveToFirstRoom}

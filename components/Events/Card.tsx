@@ -5,7 +5,7 @@ const Card = ({ title }: { title: string }) => {
     <div className="flex flex-col lg:flex-row justify-between">
       <h3 className="text-6xl font-bold font-vietnam-pro">{title}</h3>
       <div className="flex flex-col mt-10 gap-20">
-        {[...Array(2)].map((e, i) => {
+        {[...Array(1)].map((e, i) => {
           return (
             <div key={i} className="flex flex-col lg:flex-row gap-16">
               <div className="flex flex-col">

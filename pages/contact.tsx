@@ -22,7 +22,7 @@ export default function ContactPage() {
 
           <Link
             className="flex gap-2 items-center"
-            href="mailto:riawayitare@pamoja.art"
+            href="mailto:info@pamoja.art"
           >
             <Mail />
             <span>riawayitare@pamoja.art</span>

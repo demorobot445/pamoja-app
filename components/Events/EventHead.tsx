@@ -12,7 +12,8 @@ const EventHead = () => {
           UPCOMING EVENTS
         </h3>
         <Link
-          href="#"
+          href="https://docs.google.com/forms/d/1KYl3S52fHGAg3ee2w__b69V_sZVxye4_k9ZD0XJoQqU/edit?usp=drivesdk"
+          target="_blank"
           className="flex text-2xl uppercase font-bold font-vietnam-pro text-[#D9D9D9]"
         >
           OUR MAILING LIST

@@ -15,9 +15,14 @@ const Footer = () => {
         <Link href="/contact">contact</Link>
         <Link href="/events">events</Link>
       </div>
-      <p className="text-xs font-vietnam-pro text-center uppercase relative z-10 text-white">
-        All right reserved to PAMOJA ART LTD
-      </p>
+      <div className="flex flex-col w-full">
+        <p className="text-xs font-vietnam-pro text-center uppercase relative z-10 text-white">
+          Designed and Developed by Mars Black
+        </p>
+        <p className="text-xs font-vietnam-pro text-center uppercase relative z-10 text-white">
+          All right reserved to PAMOJA ART LTD
+        </p>
+      </div>
       <Image
         className="object-cover"
         src="/menu-bg.png"

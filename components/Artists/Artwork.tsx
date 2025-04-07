@@ -38,7 +38,7 @@ const Artwork: React.FC<Props> = ({ name, data }) => {
                   );
                 })}
                 <Link
-                  href="mailto:riawayitare@pamoja.art"
+                  href="mailto:info@pamoja.art"
                   className="text-xs mx-auto w-fit whitespace-nowrap cursor-pointer font-vietnam-pro font-medium uppercase py-4 px-11 bg-black text-white rounded-full"
                 >
                   Inquire for purchase
