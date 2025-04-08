@@ -63,15 +63,14 @@ const HeaderV2: React.FC<Props> = ({ isRoom = false, isColor = false }) => {
           >
             <CloseWhite />
           </button>
-          <div className="flex flex-col absolute gap-5 left-1/2 -translate-x-1/2 top-6 lg:top-16 text-[8px] lg:text-xs">
-            <h1 className="text-center font-vietnam-pro text-primary">
+          <div className="flex flex-col absolute gap-5 left-1/2 -translate-x-1/2 top-16 lg:top-24 text-xs">
+            {/* <h1 className="text-center font-vietnam-pro text-primary">
               CEO & FOUNDER
               <br /> <span className="font-bold">Ria Rwayitarev</span>
-            </h1>
+            </h1> */}
             <h2 className="text-center font-vietnam-pro text-primary">
-              riawayitare@pamoja.art
+              info@pamoja.art
               <br /> @we.are.pamoja
-              <br /> www.pamoja.art
             </h2>
           </div>
         </div>

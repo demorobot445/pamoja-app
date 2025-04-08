@@ -11,7 +11,7 @@ export default function NsengiyumvaYusuf() {
     {
       imageUrl: "/yusuf-artwork/0.jpg",
       details: [
-        "Title: Lion",
+        "Lion",
         "Original painting",
         "Acrylic on canvas",
         "Size: 58cm/ 60cm",
@@ -20,7 +20,7 @@ export default function NsengiyumvaYusuf() {
     {
       imageUrl: "/yusuf-artwork/1.jpg",
       details: [
-        "Title: dance in colors",
+        "dance in colors",
         "Original painting",
         "Acrylic on canvas",
         "Size: 120cm/ 140cm",
@@ -29,7 +29,7 @@ export default function NsengiyumvaYusuf() {
     {
       imageUrl: "/yusuf-artwork/2.jpg",
       details: [
-        "Title: b0b",
+        "b0b",
         "Original painting",
         "Plastic shoes fabrics and acrylic on canvas",
         "Size: 145cm/ 180cm",
@@ -38,7 +38,7 @@ export default function NsengiyumvaYusuf() {
     {
       imageUrl: "/yusuf-artwork/3.jpg",
       details: [
-        "Title: kumwaro",
+        "kumwaro",
         "Original painting",
         "Acrylic on canvas",
         "Size: 67cm/ 57cm",
@@ -47,7 +47,7 @@ export default function NsengiyumvaYusuf() {
     {
       imageUrl: "/yusuf-artwork/4.jpg",
       details: [
-        "Title: relationship",
+        "relationship",
         "Original painting",
         "Plastic shoes fabrics and acrylic on canvas",
         "Size: 60cm/ 60cm",

@@ -11,7 +11,7 @@ export default function HabumugishaObed() {
     {
       imageUrl: "/obed-artwork/0.jpg",
       details: [
-        "Title: adherent",
+        "adherent",
         "Original painting",
         "Acrylic on canvas",
         "Size: 100cm/ 140cm",
@@ -20,7 +20,7 @@ export default function HabumugishaObed() {
     {
       imageUrl: "/obed-artwork/1.jpg",
       details: [
-        "Title: nyamishaba",
+        "nyamishaba",
         "Original painting",
         "Acrylic on canvas",
         "Size: 66cm/ 49cm",
@@ -29,7 +29,7 @@ export default function HabumugishaObed() {
     {
       imageUrl: "/obed-artwork/2.jpg",
       details: [
-        "Title: nyamishaba",
+        "nyamishaba",
         "Original painting",
         "Acrylic on canvas",
         "Size: 66cm/ 49cm",
@@ -38,7 +38,7 @@ export default function HabumugishaObed() {
     {
       imageUrl: "/obed-artwork/3.jpg",
       details: [
-        "Title: mamamwiza",
+        "mamamwiza",
         "Original painting",
         "Acrylic on canvas",
         "Size: 120cm/ 140cm",
@@ -47,7 +47,7 @@ export default function HabumugishaObed() {
     {
       imageUrl: "/obed-artwork/4.jpg",
       details: [
-        "Title: cyato landscape 1",
+        "cyato landscape 1",
         "Original painting",
         "Acrylic on canvas",
         "Size: 90cm/ 120cm",
@@ -56,7 +56,7 @@ export default function HabumugishaObed() {
     {
       imageUrl: "/obed-artwork/5.jpg",
       details: [
-        "Title: nyamishaba",
+        "nyamishaba",
         "Original painting",
         "Acrylic on canvas",
         "Size: 66cm/ 49cm",
@@ -65,7 +65,7 @@ export default function HabumugishaObed() {
     {
       imageUrl: "/obed-artwork/6.jpg",
       details: [
-        "Title: ibirunga [volcanoes]",
+        "ibirunga [volcanoes]",
         "Original painting",
         "Acrylic on canvas",
         "Size: 66cm/ 49cm",
@@ -74,7 +74,7 @@ export default function HabumugishaObed() {
     {
       imageUrl: "/obed-artwork/7.jpg",
       details: [
-        "Title: liberity l",
+        "liberity l",
         "Original painting",
         "Acrylic on canvas",
         "Size: 160cm/ 105cm",
@@ -83,7 +83,7 @@ export default function HabumugishaObed() {
     {
       imageUrl: "/obed-artwork/8.jpg",
       details: [
-        "Title: hunter",
+        "hunter",
         "Original painting",
         "Acrylic on canvas",
         "Size: 120cm/ 120cm ",

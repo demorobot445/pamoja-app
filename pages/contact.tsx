@@ -1,4 +1,4 @@
-import { Internet, Mail, Share } from "@/components/Contact/Svgs";
+import { Mail, Share } from "@/components/Contact/Svgs";
 import Footer from "@/components/Footer/Footer";
 import HeaderV2 from "@/components/Header/HeaderV2";
 import Head from "next/head";
@@ -17,30 +17,30 @@ export default function ContactPage() {
         </h1>
         <hr className="border-primary" />
         <div className="flex flex-col text-primary text-2xl lg:text-4xl gap-2 font-vietnam-pro">
-          <p>CEO & Founder</p>
-          <p className="font-bold">Ria Rwayitare</p>
+          {/* <p>CEO & Founder</p>
+          <p className="font-bold">Ria Rwayitare</p> */}
 
           <Link
             className="flex gap-2 items-center"
             href="mailto:info@pamoja.art"
           >
             <Mail />
-            <span>riawayitare@pamoja.art</span>
+            <span>info@pamoja.art</span>
           </Link>
           <Link
             className="flex gap-2 items-center"
-            href="mailto:@we.are.pamoja"
+            href="https://www.instagram.com/we.are.pamoja"
           >
             <Share />
             <span>@we.are.pamoja</span>
           </Link>
-          <Link
+          {/* <Link
             target="_blank"
             className="flex gap-2 items-center"
             href="https://www.pamoja.art"
           >
             <Internet /> <span>www.pamoja.art</span>
-          </Link>
+          </Link> */}
         </div>
       </main>
       <Footer />

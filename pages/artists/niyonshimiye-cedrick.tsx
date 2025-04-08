@@ -11,7 +11,7 @@ export default function NiyonshimiyeCedrick() {
     {
       imageUrl: "/cedrick-artwork/0.jpg",
       details: [
-        "Title: aqua life",
+        "aqua life",
         "Original painting",
         "Acrylic on canvas",
         "Size: 100cm/140cm",
@@ -20,7 +20,7 @@ export default function NiyonshimiyeCedrick() {
     {
       imageUrl: "/cedrick-artwork/1.jpg",
       details: [
-        "Title: no matter what Mather is Mather",
+        "no matter what Mather is Mather",
         "Original painting",
         "Acrylic on canvas",
         "Size: 66cm/80cm",
@@ -29,7 +29,7 @@ export default function NiyonshimiyeCedrick() {
     {
       imageUrl: "/cedrick-artwork/2.jpg",
       details: [
-        "Title: God of zebra = colors",
+        "God of zebra = colors",
         "Original painting",
         "Acrylic on canvas",
         "Size: 106cm/73cm",
@@ -38,7 +38,7 @@ export default function NiyonshimiyeCedrick() {
     {
       imageUrl: "/cedrick-artwork/3.jpg",
       details: [
-        "Title: east African birds",
+        "east African birds",
         "Original painting",
         "Acrylic on canvas",
         "Size: 100cm/160cm",
@@ -47,7 +47,7 @@ export default function NiyonshimiyeCedrick() {
     {
       imageUrl: "/cedrick-artwork/4.jpg",
       details: [
-        "Title: binary numbers",
+        "binary numbers",
         "Original painting",
         "Acrylic on canvas",
         "Size: 70cm/60cm",
@@ -56,7 +56,7 @@ export default function NiyonshimiyeCedrick() {
     {
       imageUrl: "/cedrick-artwork/5.jpg",
       details: [
-        "Title: blessings",
+        "blessings",
         "Original painting",
         "Acrylic on canvas",
         "Size: 100cm/71cm",
@@ -65,7 +65,7 @@ export default function NiyonshimiyeCedrick() {
     {
       imageUrl: "/cedrick-artwork/6.jpg",
       details: [
-        "Title: wastes over canvas",
+        "wastes over canvas",
         "Original painting collage",
         "Found objects Acrylic on canvas",
         "Size: 113cm/64cm",

@@ -11,7 +11,7 @@ export default function IshimweShemaB() {
     {
       imageUrl: "/shema-artwork/0.jpg",
       details: [
-        "Title: emancipation III",
+        "emancipation III",
         "Original painting",
         "Acrylic on canvas",
         "Size: 115cm/ 100cm",
@@ -20,7 +20,7 @@ export default function IshimweShemaB() {
     {
       imageUrl: "/shema-artwork/1.jpg",
       details: [
-        "Title: RWANDA NZIZA",
+        "RWANDA NZIZA",
         "Original painting",
         "Acrylic on canvas",
         "Size: 80cm/ 70cm",
@@ -29,7 +29,7 @@ export default function IshimweShemaB() {
     {
       imageUrl: "/shema-artwork/2.jpg",
       details: [
-        "Title: emancipation II",
+        "emancipation II",
         "Original artwork",
         "Acrylic on canvas",
         "Size: 130cm/103cm",

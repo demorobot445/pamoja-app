@@ -11,7 +11,7 @@ export default function ElyseeMushimiyimana() {
     {
       imageUrl: "/elysee-artwork/0.jpg",
       details: [
-        "Title: umwali",
+        "umwali",
         "Original painting",
         "Acrylic on canvas",
         "Size: 100cm/ 95cm",
@@ -20,7 +20,7 @@ export default function ElyseeMushimiyimana() {
     {
       imageUrl: "/elysee-artwork/1.jpg",
       details: [
-        "Title: portrait of queen Gicanda",
+        "portrait of queen Gicanda",
         "Original painting",
         "Acrylic on canvas",
         "Size: 97cm/ 165cm",
@@ -29,7 +29,7 @@ export default function ElyseeMushimiyimana() {
     {
       imageUrl: "/elysee-artwork/2.jpg",
       details: [
-        "Title: portrait of king Mutara lll Rudahigwa",
+        "portrait of king Mutara lll Rudahigwa",
         "Original painting",
         "Acrylic on canvas",
         "Size: 97cm/ 165cm",
@@ -38,7 +38,7 @@ export default function ElyseeMushimiyimana() {
     {
       imageUrl: "/elysee-artwork/3.jpg",
       details: [
-        "Title: purity",
+        "purity",
         "Original painting",
         "Acrylic on canvas",
         "Size: 12ocm/ 90cm",
@@ -47,7 +47,7 @@ export default function ElyseeMushimiyimana() {
     {
       imageUrl: "/elysee-artwork/4.jpg",
       details: [
-        "Title: wine date",
+        "wine date",
         "Original painting",
         "Acrylic on canvas",
         "Size: 85cm/ 105cm",
@@ -56,7 +56,7 @@ export default function ElyseeMushimiyimana() {
     {
       imageUrl: "/elysee-artwork/5.jpg",
       details: [
-        "Title: portrait of gorilla",
+        "portrait of gorilla",
         "Original painting",
         "Acrylic on canvas",
         "Size: 150cm/ 120cm",
@@ -65,7 +65,7 @@ export default function ElyseeMushimiyimana() {
     {
       imageUrl: "/elysee-artwork/6.jpg",
       details: [
-        "Title: budike",
+        "budike",
         "Original painting",
         "Acrylic on canvas",
         "Size: 100cm/ 95cm",
@@ -74,7 +74,7 @@ export default function ElyseeMushimiyimana() {
     {
       imageUrl: "/elysee-artwork/7.jpg",
       details: [
-        "Title: tea",
+        "tea",
         "Original painting",
         "Acrylic on canvas",
         "Size: 130cm/ 100cm",

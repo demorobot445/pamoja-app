@@ -32,7 +32,12 @@ const Artwork: React.FC<Props> = ({ name, data }) => {
 
                 {details.map((e, i) => {
                   return (
-                    <p key={i} className="text-center font-bold">
+                    <p
+                      key={i}
+                      className={`text-center font-bold ${
+                        i === 0 ? "uppercase" : ""
+                      }`}
+                    >
                       {e}
                     </p>
                   );

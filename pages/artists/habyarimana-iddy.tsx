@@ -11,7 +11,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/0.jpg",
       details: [
-        "Title: confidant",
+        "confidant",
         "Original painting",
         "Acrylic on canvas",
         "Size: 115cm/105cm",
@@ -20,7 +20,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/1.jpg",
       details: [
-        "Title: iridescent beauty1",
+        "iridescent beauty1",
         "Original painting",
         "Acrylic on canvas",
         "Size: 100cm/95cm",
@@ -29,7 +29,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/2.jpg",
       details: [
-        "Title: portrait of inyambo cow",
+        "portrait of inyambo cow",
         "Original painting",
         "Acrylic on canvas",
         "Size: 55cm/65cm",
@@ -38,7 +38,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/3.jpg",
       details: [
-        "Title: Renaissance kigali",
+        "Renaissance kigali",
         "Original painting",
         "Acrylic on canvas",
         "Size: 195cm/140cm",
@@ -47,7 +47,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/4.jpg",
       details: [
-        "Title: iridescent beauty2",
+        "iridescent beauty2",
         "Original painting",
         "Acrylic on canvas",
         "Size: 100cm/100cm",
@@ -56,7 +56,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/5.jpg",
       details: [
-        "Title: portrait of inyambo cow",
+        "portrait of inyambo cow",
         "Original painting",
         "Acrylic on canvas",
         "Size: 65cm/50cm",
@@ -65,7 +65,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/6.jpg",
       details: [
-        "Title: first light of blessing",
+        "first light of blessing",
         "Original painting",
         "Acrylic on canvas",
         "Size: 110cm/105cm",
@@ -74,7 +74,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/7.jpg",
       details: [
-        "Title: Silent Reflection",
+        "Silent Reflection",
         "Original painting",
         "Acrylic and oil on canvas",
         "Size:110cm/ 105cm",
@@ -83,7 +83,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/8.jpg",
       details: [
-        "Title: confidant",
+        "confidant",
         "Original painting",
         "Acrylic and oil on canvas",
         "Size: 120cm/110cm",
@@ -92,7 +92,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/9.jpg",
       details: [
-        "Title: lounge in light",
+        "lounge in light",
         "Original painting",
         "Acrylic on canvas",
         "Size: 105cm/ 105cm",
@@ -101,7 +101,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/10.jpg",
       details: [
-        "Title: confidant",
+        "confidant",
         "Original painting",
         "Acrylic on canvas",
         "Size: 120cm/110cm",
@@ -110,7 +110,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/11.jpg",
       details: [
-        "Title: hobed in the uniform",
+        "hobed in the uniform",
         "Original painting",
         "Acrylic and oil on canvas",
         "Size: 45cm each side ",
@@ -119,7 +119,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/12.jpg",
       details: [
-        "Title: : first light of blessing4",
+        ": first light of blessing4",
         "Original painting",
         "Acrylic and oil on canvas",
         "Size: 80cm/ 100cm",
@@ -128,7 +128,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/13.jpg",
       details: [
-        "Title: : blessed morning",
+        ": blessed morning",
         "Original painting",
         "Acrylic and oil on canvas",
         "Size: 120cm/125cm",
@@ -137,7 +137,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/14.jpg",
       details: [
-        "Title: : blessed morning",
+        ": blessed morning",
         "Original painting",
         "Acrylic and oil on canvas",
         "Size: 120cm/125cm",
@@ -146,7 +146,7 @@ export default function HabyarimanaIddy() {
     {
       imageUrl: "/iddy-artwork/15.jpg",
       details: [
-        "Title: : self love",
+        ": self love",
         "Original painting",
         "Acrylic and oil on canvas",
         "Size: 105cm/ 110cm",
