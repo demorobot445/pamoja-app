@@ -19,9 +19,9 @@ const Footer = () => {
         <p className="text-xs font-vietnam-pro text-center uppercase relative z-10 text-white">
           Designed and Developed by Mars Black
         </p>
-        <p className="text-xs font-vietnam-pro text-center uppercase relative z-10 text-white">
+        {/* <p className="text-xs font-vietnam-pro text-center uppercase relative z-10 text-white">
           All right reserved to PAMOJA ART LTD
-        </p>
+        </p> */}
       </div>
       <Image
         className="object-cover"

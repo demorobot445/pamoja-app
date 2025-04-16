@@ -149,7 +149,7 @@ const HeaderV2: React.FC<Props> = ({ isRoom = false, isColor = false }) => {
       </header>
       {isRoom ? (
         <p className="fixed z-10 text-center text-white font-vietnam-pro w-full bottom-2 lg:bottom-3 text-xs lg:text-sm">
-          Designed and Developed by Mars Black
+          &copy;{new Date().getFullYear()} Pamoja Art Ltd. All rights reserved.
         </p>
       ) : (
         <></>
