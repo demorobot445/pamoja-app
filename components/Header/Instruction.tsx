@@ -11,11 +11,11 @@ const Instruction = () => {
     if (!active) {
       gsap
         .timeline()
+        .to(overlayRef.current!, { opacity: 1, delay: 0.35 })
+        .to(overlayRef.current!, { opacity: 0 }, ">1")
         .call(() => {
           store.isMenuShow = true;
-        })
-        .to(overlayRef.current!, { opacity: 1, delay: 0.35 })
-        .to(overlayRef.current!, { opacity: 0, delay: 1 });
+        });
     }
   }, [active]);
 
