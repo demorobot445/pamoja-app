@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Pamoja Application</title>
+        <title>Pamoja</title>
       </Head>
       <div
         className={`${
